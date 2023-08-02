@@ -66,13 +66,19 @@
 
 	<!-- Style -->
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/room.css">
 
 	<!-- Modernizr JS -->
 	<script src="../../plungins/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	 -->
+	<!-- font awesome -->
+	<link href="../../plungins/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
+</head>
+
+<!-- <![endif]--->
 </head>
 
 <body>
@@ -119,39 +125,75 @@
 			</div>
 
 			<!---------------------------- SEARCH BAR ------------------------------->
-			<div class="wrap">
-				<div class="container">
-					<div class="row">
-						<div id="availability">
-							<form action="#">
-								<div class="a-col">
-									<section>
-										<select class="cs-select cs-skin-border" id="choose1">
-											<option value="" disabled selected>Select Province</option>
-											<option value="email">Luxe Hotel</option>
-										</select>
-									</section>
-								</div>
-								<div class="a-col alternate">
-									<div class="input-field" id="choose2">
-										<label for="date-start">Check In</label>
-										<input type="text" class="form-control" id="date-start" />
-									</div>
-								</div>
-								<div class="a-col alternate">
-									<div class="input-field" id="choose3">
-										<label for="date-end">Check Out</label>
-										<input type="text" class="form-control" id="date-end" />
-									</div>
-								</div>
-								<div class="a-col action">
-									<a href="#">
-										<span>Check</span>
-										Availability
-									</a>
-								</div>
-							</form>
+			<div class="seach_bar">
+				<div class="province_room">
+					<div class="province">
+						<div id="province_space">
+							<i class="fa-solid fa-location-dot"></i>
+							<select name="province" id="povince_items">
+								<option value="null">Select Province</option>
+								<option value="Majunga">Majunga</option>
+								<option value="Diego">Diego</option>
+								<option value="Tulear">Tulear</option>
+							</select>
 						</div>
+					</div>
+					<button class="room_type_btn">
+						<div id="occuped">
+							<label for="occuped">Occuped now</label>
+							<input type="checkbox" name="occuped" id="occuped">
+						</div>
+						<div id="room_type">
+							<select name="room_type_select" id="room_type_select">
+								<option value="null">Choose</option>
+								<option value="VIP">VIP</option>
+								<option value="VIP">family</option>
+								<option value="VIP">conference</option>
+							</select>
+							<label for="room_type">type</label>
+						</div>
+					</button>
+				</div>
+
+				<div class="date_features">
+					<div class="date_handler">
+						<div>
+							<div><input type="datetime-local" name="min_date" id="min_date"></div>
+							<div><input type="datetime-local" name="max_date" id="max_date"></div>
+						</div>
+					</div>
+					<div class="room_feature_space">
+						<i id="sea_view" class="fa-solid fa-water"></i>
+						<span id="vip_category">VIP</span>
+						<i id="hot_water" class="fa-solid fa-hot-tub-person"></i>
+						<i id="wifi_available" class="fa-solid fa-wifi"></i>
+						<i id="room_service" class="fa-solid fa-bell-concierge"></i>
+						<i id="mini_bar" class="fa-solid fa-champagne-glasses"></i>
+						<i id="flat_screen" class="fa-solid fa-tv"></i>
+					</div>
+				</div>
+
+				<div class="Price_capacity">
+					<button class="occuped_capacity">
+						<div id="occuped">
+							<label for="promotion">In promotion</label>
+							<input type="checkbox" name="promotion" id="promotion">
+						</div>
+						<div id="capacity">
+							<input type="number" name="capacity" id="capacity">
+							<label for="capacity">Capacity</label>
+						</div>
+					</button>
+					<div class="price_handler">
+						<div id="min_price">
+							<input type="number" name="min_price">
+							<span>MIN</span>
+						</div>
+						<div id="max_price">
+							<input type="number" name="max_price">
+							<span>MAX</span>
+						</div>
+						<p>Price Ariary</p>
 					</div>
 				</div>
 			</div>

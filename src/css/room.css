@@ -1,0 +1,261 @@
+:root {
+    --onecolor: orange;
+    --onetext: black;
+}
+
+#province_space,
+#occuped,
+#capacity,
+.occuped_capacity,
+.room_type_btn,
+#room_type,
+.price_handler,
+.date_features {
+    display: flex;
+    flex-direction: column;
+}
+
+.province_room,
+.seach_bar,
+.Price_capacity,
+#min_price,
+#max_price,
+.date_handler div,
+.room_feature_space {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.seach_bar {
+    padding-top: 5px;
+    margin-top: 30px;
+    width: 90%;
+    margin-inline: auto;
+    border-top: 1px var(--onecolor) solid;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.province_room {
+    text-align: center;
+    padding-top: 10px;
+    /* border: 1px var(--onetext) solid; */
+    margin-bottom: 20px;
+}
+
+.province {
+    width: 200px;
+}
+
+.room_type_btn {
+    text-align: start;
+    color: var(--onetext);
+    font-size: 12px;
+    font-weight: 1000;
+    line-height: 150%;
+    border: none;
+    border-left: 3px var(--onecolor) solid;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.occuped_capacity {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    justify-content: space-between;
+    border: none;
+    border-right: 3px var(--onecolor) solid;
+}
+
+#povince_items {
+    text-align: center;
+    width: fit-content;
+    margin: 5px auto;
+    border: none;
+    border-top: 1px solid var(--onetext);
+    background-color: transparent;
+    padding-top: 2px;
+}
+
+#province_space,
+.price_handler {
+    gap: 9px;
+}
+
+
+#province_space,
+#province_space p {
+    color: var(--onetext);
+}
+
+#province_space i {
+    font-size: 40px;
+}
+
+.Price_capacity {
+    /* border: 1px var(--onetext) solid; */
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.price_handler {
+    width: 200px;
+}
+
+
+#capacity {
+    width: 76px;
+    border: none;
+    outline: none;
+    gap: 4px;
+    margin-inline: auto;
+}
+
+#occuped label,
+#capacity label {
+    color: var(--onetext);
+    font-size: 10px;
+}
+
+#occuped input {
+    width: 20px;
+    height: 20px;
+    border: 1px var(--onetext) solid;
+    margin: auto;
+}
+
+#room_type_select {
+    background-color: white;
+    border: none;
+    width: 76px;
+    height: 33px;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+#min_price,
+#max_price {
+    width: 70%;
+    margin-inline: auto;
+    gap: 6px;
+}
+
+
+#min_price input,
+#max_price input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: var(--onetext) 1px solid;
+}
+
+#min_price span,
+#max_price span {
+    color: var(--onetext);
+    font-size: 10px;
+}
+
+
+.price_handler p {
+    margin-inline: auto !important;
+    color: var(--onetext);
+}
+
+.occuped_capacity,
+.room_type_btn {
+    width: 90px;
+}
+
+#room_type {
+    margin-inline: auto;
+}
+
+.date_features {
+    /* border: 1px var(--onetext) solid; */
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--onecolor);
+    justify-content: space-between;
+}
+
+.date_handler,
+.date_handler div div input {
+    text-align: center;
+}
+
+.date_handler div div input {
+    border: none;
+    border-bottom: 1px var(--onetext) solid;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+
+.date_handler div div {
+    position: relative;
+}
+
+.date_handler div div:nth-child(1)::before {
+    content: "check in";
+    position: absolute;
+    bottom: -7px;
+    padding-inline: 40px;
+    left: 0px;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.date_handler div div:nth-child(2)::before {
+    content: "check out";
+    position: absolute;
+    bottom: -7px;
+    padding-inline: 40px;
+    right: 0px;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.date_handler div {
+    flex-wrap: wrap;
+}
+
+.date_handler div div {
+    margin-inline: 12px;
+}
+
+.date_handler p {
+    color: var(--onetext);
+}
+
+.room_feature_space {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room_feature_space i {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.room_feature_space span {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.room_feature_space i:hover,
+.room_feature_space span:hover {
+    color: var(--onecolor);
+    transform: scale(1.1);
+}
+
+.room_feature_space span {
+    font-weight: 1000;
+}
