@@ -1232,7 +1232,7 @@
 
 #amenities.home-amenities {
     max-height: 100%;
-    background-image: url(../images/icon/amenities-bg.jpg);
+    background-image: url(../../public/assets/images/icon/amenities-bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1282,87 +1282,87 @@
 }
 
 #amenities .icon.icon-1 {
-    background-image: url(../images/icon/shield-hover.png);
+    background-image: url(../../public/assets/images/icon/shield-hover.png);
 }
 
 #amenities .icon.icon-1:hover {
-    background-image: url(../images/icon/shield.png);
+    background-image: url(../../public/assets/images/icon/shield.png);
 }
 
 #amenities .icon.icon-2 {
-    background-image: url(../images/icon/air-conditioner_3258410.png);
+    background-image: url(../../public/assets/images/icon/air-conditioner_3258410.png);
 }
 
 #amenities .icon.icon-2:hover {
-    background-image: url(../images/icon/air-conditioner_3258396.png);
+    background-image: url(../../public/assets/images/icon/air-conditioner_3258396.png);
 }
 
 #amenities .icon.icon-3 {
-    background-image: url(../images/icon/bathtub_524941.png);
+    background-image: url(../../public/assets/images/icon/bathtub_524941.png);
 }
 
 #amenities .icon.icon-3:hover {
-    background-image: url(../images/icon/bathtub_525023.png);
+    background-image: url(../../public/assets/images/icon/bathtub_525023.png);
 }
 
 #amenities .icon.icon-4 {
-    background-image: url(../images/icon/shower-hover.png);
+    background-image: url(../../public/assets/images/icon/shower-hover.png);
 }
 
 #amenities .icon.icon-4:hover {
-    background-image: url(../images/icon/shower.png);
+    background-image: url(../../public/assets/images/icon/shower.png);
 }
 
 #amenities .icon.icon-5 {
-    background-image: url(../images/icon/towel-hover.png);
+    background-image: url(../../public/assets/images/icon/towel-hover.png);
 }
 
 #amenities .icon.icon-5:hover {
-    background-image: url(../images/icon/towel.png);
+    background-image: url(../../public/assets/images/icon/towel.png);
 }
 
 #amenities .icon.icon-6 {
-    background-image: url(../images/icon/television_1986670.png);
+    background-image: url(../../public/assets/images/icon/television_1986670.png);
 }
 
 #amenities .icon.icon-6:hover {
-    background-image: url(../images/icon/television_1986581.png);
+    background-image: url(../../public/assets/images/icon/television_1986581.png);
 }
 
 #amenities .icon.icon-7 {
-    background-image: url(../images/icon/wifi_2557236.png);
+    background-image: url(../../public/assets/images/icon/wifi_2557236.png);
 	background-color: rgba(255, 255, 255, 0.3);
 	border-radius: 10px;
 }
 
 #amenities .icon.icon-7:hover {
-    background-image: url(../images/icon/wifi_2557257.png);
+    background-image: url(../../public/assets/images/icon/wifi_2557257.png);
 }
 
 #amenities .icon.icon-8 {
-    background-image: url(../images/icon/call_4899425.png);
+    background-image: url(../../public/assets/images/icon/call_4899425.png);
 	background-color: rgba(255, 255, 255, 0.3);
 	border-radius: 5px;
 }
 
 #amenities .icon.icon-8:hover {
-    background-image: url(../images/icon/call_4896842.png);
+    background-image: url(../../public/assets/images/icon/call_4896842.png);
 }
 
 #amenities .icon.icon-9 {
-    background-image: url(../images/icon/bar-counter_4859275.png);
+    background-image: url(../../public/assets/images/icon/bar-counter_4859275.png);
 }
 
 #amenities .icon.icon-9:hover {
-    background-image: url(../images/icon/bar-counter_4859274.png);
+    background-image: url(../../public/assets/images/icon/bar-counter_4859274.png);
 }
 
 #amenities .icon.icon-10 {
-    background-image: url(../images/icon/kitchen-hover.png);
+    background-image: url(../../public/assets/images/icon/kitchen-hover.png);
 }
 
 #amenities .icon.icon-10:hover {
-    background-image: url(../images/icon/kitchen.png);
+    background-image: url(../../public/assets/images/icon/kitchen.png);
 }
 
 /* ================================================= */
@@ -1458,83 +1458,83 @@
 }
 
 #rooms .room-icon li.icon-1 {
-    background-image: url(../images/icon/shield.png);
+    background-image: url(../../public/assets/images/icon/shield.png);
 }
 
 #rooms .room-icon li.icon-1:hover {
-    background-image: url(../images/icon/shield-hover.png);
+    background-image: url(../../public/assets/images/icon/shield-hover.png);
 }
 
 #rooms .room-icon li.icon-2 {
-    background-image: url(../images/icon/air-conditioner_3258410.png);
+    background-image: url(../../public/assets/images/icon/air-conditioner_3258410.png);
 }
 
 #rooms .room-icon li.icon-2:hover {
-    background-image: url(../images/icon/air-conditioner_3258396.png);
+    background-image: url(../../public/assets/images/icon/air-conditioner_3258396.png);
 }
 
 #rooms .room-icon li.icon-3 {
-    background-image: url(../images/icon/bathtub_524941.png);
+    background-image: url(../../public/assets/images/icon/bathtub_524941.png);
 }
 
 #rooms .room-icon li.icon-3:hover {
-    background-image: url(../images/icon/bathtub_525023.png);
+    background-image: url(../../public/assets/images/icon/bathtub_525023.png);
 }
 
 #rooms .room-icon li.icon-4 {
-    background-image: url(../images/icon/shower.png);
+    background-image: url(../../public/assets/images/icon/shower.png);
 }
 
 #rooms .room-icon li.icon-4:hover {
-    background-image: url(../images/icon/shower-hover.png);
+    background-image: url(../../public/assets/images/icon/shower-hover.png);
 }
 
 #rooms .room-icon li.icon-5 {
-    background-image: url(../images/icon/towel.png);
+    background-image: url(../../public/assets/images/icon/towel.png);
 }
 
 #rooms .room-icon li.icon-5:hover {
-    background-image: url(../images/icon/towel-hover.png);
+    background-image: url(../../public/assets/images/icon/towel-hover.png);
 }
 
 #rooms .room-icon li.icon-6 {
-    background-image: url(../images/icon/television_1986670.png);
+    background-image: url(../../public/assets/images/icon/television_1986670.png);
 }
 
 #rooms .room-icon li.icon-6:hover {
-    background-image: url(../images/icon/television_1986581.png);
+    background-image: url(../../public/assets/images/icon/television_1986581.png);
 }
 
 #rooms .room-icon li.icon-7 {
-    background-image: url(../images/icon/wifi_2557236.png);
+    background-image: url(../../public/assets/images/icon/wifi_2557236.png);
 }
 
 #rooms .room-icon li.icon-7:hover {
-    background-image: url(../images/icon/wifi_2557257.png);
+    background-image: url(../../public/assets/images/icon/wifi_2557257.png);
 }
 
 #rooms .room-icon li.icon-8 {
-    background-image: url(../images/icon/call_4899425.png);
+    background-image: url(../../public/assets/images/icon/call_4899425.png);
 }
 
 #rooms .room-icon li.icon-8:hover {
-    background-image: url(../images/icon/call_4896842.png);
+    background-image: url(../../public/assets/images/icon/call_4896842.png);
 }
 
 #rooms .room-icon li.icon-9 {
-    background-image: url(../images/icon/bar-counter_4859275.png);
+    background-image: url(../../public/assets/images/icon/bar-counter_4859275.png);
 }
 
 #rooms .room-icon li.icon-9:hover {
-    background-image: url(../images/icon/bar-counter_4859274.png);
+    background-image: url(../../public/assets/images/icon/bar-counter_4859274.png);
 }
 
 #rooms .room-icon li.icon-10 {
-    background-image: url(../images/icon/kitchen.png);
+    background-image: url(../../public/assets/images/icon/kitchen.png);
 }
 
 #rooms .room-icon li.icon-10:hover {
-    background-image: url(../images/icon/kitchen-hover.png);
+    background-image: url(../../public/assets/images/icon/kitchen-hover.png);
 }
 
 #rooms .room-rate {
