@@ -12,7 +12,11 @@
 .price_handler,
 .date_features,
 .room_features_price,
-.features_contain {
+.features_contain,
+.province,
+.page_link,
+.send_message_foot,
+.sociaux_link a  {
     display: flex;
     flex-direction: column;
 }
@@ -26,21 +30,59 @@
 .room_feature_space,
 .name_rate,
 .room_booking_content,
-.room_conainer {
+.room_conainer,
+.foot_container,
+.send_text,
+.sociaux_link {
     display: flex;
     flex-direction: row;
 }
 
 
 .seach_bar {
-    padding-top: 5px;
-    margin-top: 30px;
+    /* padding-top: 50px;
+    margin-top: 100px;
     width: 90%;
     margin-inline: auto;
     border-top: 1px var(--onecolor) solid;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: 50px;
+    position: relative; */
+
+    margin-top: 100px;
+    flex-wrap: wrap;
+    padding: 50px;
+    border-top: 1px solid var(--onecolor);
+    width: fit-content;
+    position: relative;
+    margin-inline: auto;
+    padding-top: 100px;
+    width: 92%;
+    justify-content: space-between;
+}
+
+.seach_bar::before {
+    content: "SEARCH ROOM:";
+    border-left: 1px var(--onecolor) solid;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-weight: 1000;
+    padding-left: 16px;
+    color: var(--onetext);
+}
+
+.seach_bar::after {
+    content: "You can consult all the existing rooms in Akory hotel by specifying the options of your criteria.";
+    position: absolute;
+    border-right: 1px var(--onecolor) solid;
+    padding-right: 20px;
+    top: -2px;
+    right: 0;
+    width: 45%;
+    text-align: end;
+    font-size: 14px;
+    padding-top: 10px;
+    ;
 }
 
 .province_room {
@@ -52,6 +94,8 @@
 
 .province {
     width: 200px;
+    gap: 50px;
+    justify-content: space-between;
 }
 
 .room_type_btn {
@@ -183,6 +227,7 @@
 
 .date_features {
     /* border: 1px var(--onetext) solid; */
+    gap: 80px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--onecolor);
     justify-content: space-between;
@@ -195,7 +240,7 @@
 
 .date_handler div div input {
     border: none;
-    border-bottom: 1px var(--onetext) solid;
+    border-bottom: 1px var(--onecolor) solid;
     font-size: 14px;
     margin-bottom: 10px;
     padding-bottom: 6px;
@@ -292,8 +337,49 @@
     width: fit-content;
     gap: 200px;
     flex-wrap: wrap;
-    margin-inline: auto ;
+    margin-inline: auto;
 }
+
+.room_conainer h1 {
+    color: red;
+}
+
+.room_serction {
+    margin-top: 100px;
+    padding: 50px;
+    border-top: 1px solid var(--onecolor);
+    width: fit-content;
+    position: relative;
+    margin-inline: auto;
+    padding-top: 100px;
+    width: 92%;
+}
+
+.room_serction::before {
+    content: "ROOMS FOUNDED:";
+    position: absolute;
+    top: -30px;
+    left: 0;
+
+    color: var(--onetext);
+    font-weight: 1000;
+    border-left: 1px var(--onecolor) solid;
+    padding-left: 17px;
+}
+
+.room_serction::after {
+    content: "Following your search, you can discover our comfortable accommodations, equipped with modern facilities for an unforgettable stay.";
+    position: absolute;
+    border-right: 1px var(--onecolor) solid;
+    padding-right: 20px;
+    top: -2px;
+    right: 0;
+    width: 50%;
+    text-align: end;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
 
 /* room container end */
 
@@ -404,7 +490,10 @@
     width: 250px;
     margin-top: 30px;
     background-color: var(--onecolor);
-    border-radius: 0  12px 0 0;
+    border-radius: 0 12px 0 0;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
 }
 
 .room_booking_content {
@@ -416,15 +505,13 @@
     color: white;
     font-weight: 800;
     margin-bottom: 14px;
-    position: relative;
-    transition: .5s;
 }
 
-.room_booking_content p:hover::before {
+.room_booking_content:hover::before {
     content: "log in required";
     font-size: 12px;
     position: absolute;
-    bottom: -12px;
+    bottom: 0;
     color: red;
 }
 
@@ -432,4 +519,135 @@
 .room_booking_content i {
     margin-top: 8px;
     color: white;
+}
+
+footer {
+    padding-inline: 2%;
+}
+
+.foot_container {
+    justify-content: space-between;
+    border-top: var(--onecolor) 1px solid;
+    height: 100%;
+    padding-bottom: 2%;
+    padding-inline: 2%;
+    flex-wrap: wrap;
+}
+
+.discribe_foot {
+    border-top: 3px var(--onecolor) solid;
+    border-left: 3px var(--onecolor) solid;
+    width: 250px;
+    margin-top: 4%;
+    text-align: start;
+    padding-left: 3%;
+    padding-top: 3%;
+    position: relative;
+}
+
+
+.discribe_foot::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    content: "©";
+    height: 60px;
+    width: 60px ;
+    background-color: #e6e6e6;
+    border: 1px var(--onecolor) solid;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--onecolor);
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+
+.page_link {
+    width: 120px;
+    justify-content: space-around;
+    text-align: end;
+    padding-right: 5%;
+    border-right: 1px rgba(255, 166, 0, 0.363) solid;
+    padding-bottom: 5%;
+    width: 250px;
+    border-bottom: 3px solid var(--onecolor);
+}
+
+.send_text {
+    margin-top: 2%;
+    width: fit-content;
+    border-right: 3px var(--onecolor) solid;
+    position: relative;
+    flex-wrap: wrap-reverse;
+}
+
+
+.send_text::after {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 60%;
+    right: -6px;
+    top: 0;
+    background: #e6e6e6;
+}
+
+.text_invitation {
+    padding-inline: 3%;
+    width: 250px;
+    border-bottom: 3px solid var(--onecolor);
+}
+
+.sociaux_link {
+    position: absolute;
+    width: fit-content;
+    justify-content: space-between;
+    bottom: -20px;
+    left: 0px;
+    gap: 11px;
+    background-color: #e6e6e6;
+}
+
+.sociaux_link a {
+    border: 1px var(--onecolor) solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}                   
+
+.send_message_foot {
+    width: 250px;
+    margin-top: 3%;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.message_foot_container input,
+.message_foot_container textarea {
+    width: 100%;
+    margin-bottom: 5%;
+    outline: none;
+    border: none;
+    border-bottom: var(--onecolor) 3px solid;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.874);
+    border-radius: 5px 5px 0 0;
+}
+
+.send_message_foot button {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: var(--onecolor);
+    font-weight: 1000;
+    color: white;
+    border-radius: 5px;
 }
