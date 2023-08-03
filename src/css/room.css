@@ -10,7 +10,9 @@
 .room_type_btn,
 #room_type,
 .price_handler,
-.date_features {
+.date_features,
+.room_features_price,
+.features_contain {
     display: flex;
     flex-direction: column;
 }
@@ -21,7 +23,10 @@
 #min_price,
 #max_price,
 .date_handler div,
-.room_feature_space {
+.room_feature_space,
+.name_rate,
+.room_booking_content,
+.room_conainer {
     display: flex;
     flex-direction: row;
 }
@@ -35,6 +40,7 @@
     border-top: 1px var(--onecolor) solid;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
 .province_room {
@@ -94,6 +100,7 @@
 
 #province_space i {
     font-size: 40px;
+    color: var(--onecolor);
 }
 
 .Price_capacity {
@@ -258,4 +265,171 @@
 
 .room_feature_space span {
     font-weight: 1000;
+}
+
+#croissance_price {
+    text-align: center;
+}
+
+#croissance_price i {
+    transition: .5s;
+}
+
+#croissance_price i:hover {
+    color: var(--onecolor);
+    transform: scale(1.1);
+}
+
+.room_intro {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/* room container start */
+.room_conainer {
+    width: fit-content;
+    gap: 200px;
+    flex-wrap: wrap;
+    margin-inline: auto ;
+}
+
+/* room container end */
+
+.room_items {
+    border: 1px solid var(--onecolor);
+    border-top: none;
+    border-left: none;
+    width: 350px;
+    padding-right: 50px;
+    position: relative;
+    margin-inline: auto;
+}
+
+/* room_features  start*/
+
+.room_features_price {
+    position: absolute;
+    top: -4px;
+    right: -40px;
+    width: 80px;
+    justify-content: space-around;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+    border: var(--onecolor) 1px solid;
+    border-bottom: 0;
+    border-radius: 13px 13px 0 0;
+}
+
+.room_features_price i,
+.room_features_price span {
+    margin-inline: auto;
+}
+
+.features_contain {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* room_features end */
+
+/* room_price start */
+#netPrice {
+    color: var(--onecolor);
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+#promotion_end {
+    color: rgb(0, 0, 0);
+}
+
+#net_price {
+    color: var(--onecolor);
+    font-weight: 1000;
+}
+
+/* room_price end */
+
+
+
+.room_image_content {
+    width: 100%;
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: 1000;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.room_details_content {
+    padding-inline: 30px;
+    text-align: start;
+}
+
+.name_rate {
+    justify-content: space-between;
+}
+
+.room_description_with_prommotion {
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+.room_description_without_prommotion {
+    font-size: 15px;
+    margin-top: -20px;
+    display: none;
+}
+
+.room_hotel {
+    text-align: start;
+}
+
+#room_type_name {
+    text-align: center;
+    padding-right: 30px;
+}
+
+#room_location {
+    margin-top: -40px
+}
+
+
+.room_booking_content {
+    width: 250px;
+    margin-top: 30px;
+    background-color: var(--onecolor);
+    border-radius: 0  12px 0 0;
+}
+
+.room_booking_content {
+    justify-content: space-around;
+    padding: 0;
+}
+
+.room_booking_content p {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 14px;
+    position: relative;
+    transition: .5s;
+}
+
+.room_booking_content p:hover::before {
+    content: "log in required";
+    font-size: 12px;
+    position: absolute;
+    bottom: -12px;
+    color: red;
+}
+
+
+.room_booking_content i {
+    margin-top: 8px;
+    color: white;
 }
