@@ -586,15 +586,6 @@ footer {
 }
 
 
-.send_text::after {
-    position: absolute;
-    content: "";
-    width: 7px;
-    height: 60%;
-    right: -6px;
-    top: 0;
-    background: #e6e6e6;
-}
 
 .text_invitation {
     padding-inline: 3%;
@@ -650,4 +641,9 @@ footer {
     font-weight: 1000;
     color: white;
     border-radius: 5px;
+}
+
+.foot_container div {
+    margin-inline: auto;
+    margin-top: 50px;
 }
