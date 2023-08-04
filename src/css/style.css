@@ -3191,10 +3191,10 @@ output {
 textarea.form-control {
   height: auto;
 }
-
+/* 
 input[type="search"] {
   -webkit-appearance: none;
-}
+} */
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"].form-control,
@@ -6400,7 +6400,7 @@ button.close {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
 
 .modal-open {
@@ -7764,7 +7764,7 @@ figure {
 #fh5co-primary-menu > li > .sf-with-ul:after {
   border: none !important;
   font-family: 'themify';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -7792,7 +7792,7 @@ figure {
 #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'themify';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -8128,7 +8128,7 @@ div.cs-select span {
 }
 #availability .a-col.action a {
   align-items: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   height: 100%;
   line-height: 20px;
   padding: 14px;
@@ -8144,7 +8144,7 @@ div.cs-select span {
 }
 #availability .a-col.action a::after {
   font-family: 'themify';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

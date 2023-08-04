@@ -1,0 +1,649 @@
+:root {
+    --onecolor: orange;
+    --onetext: black;
+}
+
+#province_space,
+#occuped,
+#capacity,
+.occuped_capacity,
+.room_type_btn,
+#room_type,
+.price_handler,
+.date_features,
+.room_features_price,
+.features_contain,
+.province,
+.page_link,
+.send_message_foot,
+.sociaux_link a  {
+    display: flex;
+    flex-direction: column;
+}
+
+.province_room,
+.seach_bar,
+.Price_capacity,
+#min_price,
+#max_price,
+.date_handler div,
+.room_feature_space,
+.name_rate,
+.room_booking_content,
+.room_conainer,
+.foot_container,
+.send_text,
+.sociaux_link {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.seach_bar {
+    /* padding-top: 50px;
+    margin-top: 100px;
+    width: 90%;
+    margin-inline: auto;
+    border-top: 1px var(--onecolor) solid;
+    margin-bottom: 50px;
+    position: relative; */
+
+    margin-top: 100px;
+    flex-wrap: wrap;
+    padding: 50px;
+    border-top: 1px solid var(--onecolor);
+    width: fit-content;
+    position: relative;
+    margin-inline: auto;
+    padding-top: 100px;
+    width: 92%;
+    justify-content: space-between;
+}
+
+.seach_bar::before {
+    content: "SEARCH ROOM:";
+    border-left: 1px var(--onecolor) solid;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-weight: 1000;
+    padding-left: 16px;
+    color: var(--onetext);
+}
+
+.seach_bar::after {
+    content: "You can consult all the existing rooms in Akory hotel by specifying the options of your criteria.";
+    position: absolute;
+    border-right: 1px var(--onecolor) solid;
+    padding-right: 20px;
+    top: -2px;
+    right: 0;
+    width: 45%;
+    text-align: end;
+    font-size: 14px;
+    padding-top: 10px;
+    ;
+}
+
+.province_room {
+    text-align: center;
+    padding-top: 10px;
+    /* border: 1px var(--onetext) solid; */
+    margin-bottom: 20px;
+}
+
+.province {
+    width: 200px;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.room_type_btn {
+    text-align: start;
+    color: var(--onetext);
+    font-size: 12px;
+    font-weight: 1000;
+    line-height: 150%;
+    border: none;
+    border-left: 3px var(--onecolor) solid;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.occuped_capacity {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    justify-content: space-between;
+    border: none;
+    border-right: 3px var(--onecolor) solid;
+}
+
+#povince_items {
+    text-align: center;
+    width: fit-content;
+    margin: 5px auto;
+    border: none;
+    border-top: 1px solid var(--onetext);
+    background-color: transparent;
+    padding-top: 2px;
+}
+
+#province_space,
+.price_handler {
+    gap: 9px;
+}
+
+
+#province_space,
+#province_space p {
+    color: var(--onetext);
+}
+
+#province_space i {
+    font-size: 40px;
+    color: var(--onecolor);
+}
+
+.Price_capacity {
+    /* border: 1px var(--onetext) solid; */
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.price_handler {
+    width: 200px;
+}
+
+
+#capacity {
+    width: 76px;
+    border: none;
+    outline: none;
+    gap: 4px;
+    margin-inline: auto;
+}
+
+#occuped label,
+#capacity label {
+    color: var(--onetext);
+    font-size: 10px;
+}
+
+#occuped input {
+    width: 20px;
+    height: 20px;
+    border: 1px var(--onetext) solid;
+    margin: auto;
+}
+
+#room_type_select {
+    background-color: white;
+    border: none;
+    width: 76px;
+    height: 33px;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+#min_price,
+#max_price {
+    width: 70%;
+    margin-inline: auto;
+    gap: 6px;
+}
+
+
+#min_price input,
+#max_price input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: var(--onetext) 1px solid;
+}
+
+#min_price span,
+#max_price span {
+    color: var(--onetext);
+    font-size: 10px;
+}
+
+
+.price_handler p {
+    margin-inline: auto !important;
+    color: var(--onetext);
+}
+
+.occuped_capacity,
+.room_type_btn {
+    width: 90px;
+}
+
+#room_type {
+    margin-inline: auto;
+}
+
+.date_features {
+    /* border: 1px var(--onetext) solid; */
+    gap: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--onecolor);
+    justify-content: space-between;
+}
+
+.date_handler,
+.date_handler div div input {
+    text-align: center;
+}
+
+.date_handler div div input {
+    border: none;
+    border-bottom: 1px var(--onecolor) solid;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+
+.date_handler div div {
+    position: relative;
+}
+
+.date_handler div div:nth-child(1)::before {
+    content: "check in";
+    position: absolute;
+    bottom: -7px;
+    padding-inline: 40px;
+    left: 0px;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.date_handler div div:nth-child(2)::before {
+    content: "check out";
+    position: absolute;
+    bottom: -7px;
+    padding-inline: 40px;
+    right: 0px;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.date_handler div {
+    flex-wrap: wrap;
+}
+
+.date_handler div div {
+    margin-inline: 12px;
+}
+
+.date_handler p {
+    color: var(--onetext);
+}
+
+.room_feature_space {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.room_feature_space i {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.room_feature_space span {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.room_feature_space i:hover,
+.room_feature_space span:hover {
+    color: var(--onecolor);
+    transform: scale(1.1);
+}
+
+.room_feature_space span {
+    font-weight: 1000;
+}
+
+#croissance_price {
+    text-align: center;
+}
+
+#croissance_price i {
+    transition: .5s;
+}
+
+#croissance_price i:hover {
+    color: var(--onecolor);
+    transform: scale(1.1);
+}
+
+.room_intro {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/* room container start */
+.room_conainer {
+    width: fit-content;
+    gap: 200px;
+    flex-wrap: wrap;
+    margin-inline: auto;
+}
+
+.room_conainer h1 {
+    color: red;
+}
+
+.room_serction {
+    margin-top: 100px;
+    padding: 50px;
+    border-top: 1px solid var(--onecolor);
+    width: fit-content;
+    position: relative;
+    margin-inline: auto;
+    padding-top: 100px;
+    width: 92%;
+}
+
+.room_serction::before {
+    content: "ROOMS FOUNDED:";
+    position: absolute;
+    top: -30px;
+    left: 0;
+
+    color: var(--onetext);
+    font-weight: 1000;
+    border-left: 1px var(--onecolor) solid;
+    padding-left: 17px;
+}
+
+.room_serction::after {
+    content: "Following your search, you can discover our comfortable accommodations, equipped with modern facilities for an unforgettable stay.";
+    position: absolute;
+    border-right: 1px var(--onecolor) solid;
+    padding-right: 20px;
+    top: -2px;
+    right: 0;
+    width: 50%;
+    text-align: end;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+
+/* room container end */
+
+.room_items {
+    border: 1px solid var(--onecolor);
+    border-top: none;
+    border-left: none;
+    width: 350px;
+    padding-right: 50px;
+    position: relative;
+    margin-inline: auto;
+}
+
+/* room_features  start*/
+
+.room_features_price {
+    position: absolute;
+    top: -4px;
+    right: -40px;
+    width: 80px;
+    justify-content: space-around;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+    border: var(--onecolor) 1px solid;
+    border-bottom: 0;
+    border-radius: 13px 13px 0 0;
+}
+
+.room_features_price i,
+.room_features_price span {
+    margin-inline: auto;
+}
+
+.features_contain {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* room_features end */
+
+/* room_price start */
+#netPrice {
+    color: var(--onecolor);
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+#promotion_end {
+    color: rgb(0, 0, 0);
+}
+
+#net_price {
+    color: var(--onecolor);
+    font-weight: 1000;
+}
+
+/* room_price end */
+
+
+
+.room_image_content {
+    width: 100%;
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: 1000;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.room_details_content {
+    padding-inline: 30px;
+    text-align: start;
+}
+
+.name_rate {
+    justify-content: space-between;
+}
+
+.room_description_with_prommotion {
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+.room_description_without_prommotion {
+    font-size: 15px;
+    margin-top: -20px;
+    display: none;
+}
+
+.room_hotel {
+    text-align: start;
+}
+
+#room_type_name {
+    text-align: center;
+    padding-right: 30px;
+}
+
+#room_location {
+    margin-top: -40px
+}
+
+
+.room_booking_content {
+    width: 250px;
+    margin-top: 30px;
+    background-color: var(--onecolor);
+    border-radius: 0 12px 0 0;
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+}
+
+.room_booking_content {
+    justify-content: space-around;
+    padding: 0;
+}
+
+.room_booking_content p {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.room_booking_content:hover::before {
+    content: "log in required";
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    color: red;
+}
+
+
+.room_booking_content i {
+    margin-top: 8px;
+    color: white;
+}
+
+footer {
+    padding-inline: 2%;
+}
+
+.foot_container {
+    justify-content: space-between;
+    border-top: var(--onecolor) 1px solid;
+    height: 100%;
+    padding-bottom: 2%;
+    padding-inline: 2%;
+    flex-wrap: wrap;
+}
+
+.discribe_foot {
+    border-top: 3px var(--onecolor) solid;
+    border-left: 3px var(--onecolor) solid;
+    width: 250px;
+    margin-top: 4%;
+    text-align: start;
+    padding-left: 3%;
+    padding-top: 3%;
+    position: relative;
+}
+
+
+.discribe_foot::before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    content: "©";
+    height: 60px;
+    width: 60px ;
+    background-color: #e6e6e6;
+    border: 1px var(--onecolor) solid;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--onecolor);
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+
+.page_link {
+    width: 120px;
+    justify-content: space-around;
+    text-align: end;
+    padding-right: 5%;
+    border-right: 1px rgba(255, 166, 0, 0.363) solid;
+    padding-bottom: 5%;
+    width: 250px;
+    border-bottom: 3px solid var(--onecolor);
+}
+
+.send_text {
+    margin-top: 2%;
+    width: fit-content;
+    border-right: 3px var(--onecolor) solid;
+    position: relative;
+    flex-wrap: wrap-reverse;
+}
+
+
+
+.text_invitation {
+    padding-inline: 3%;
+    width: 250px;
+    border-bottom: 3px solid var(--onecolor);
+}
+
+.sociaux_link {
+    position: absolute;
+    width: fit-content;
+    justify-content: space-between;
+    bottom: -20px;
+    left: 0px;
+    gap: 11px;
+    background-color: #e6e6e6;
+}
+
+.sociaux_link a {
+    border: 1px var(--onecolor) solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}                   
+
+.send_message_foot {
+    width: 250px;
+    margin-top: 3%;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.message_foot_container input,
+.message_foot_container textarea {
+    width: 100%;
+    margin-bottom: 5%;
+    outline: none;
+    border: none;
+    border-bottom: var(--onecolor) 3px solid;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.874);
+    border-radius: 5px 5px 0 0;
+}
+
+.send_message_foot button {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: var(--onecolor);
+    font-weight: 1000;
+    color: white;
+    border-radius: 5px;
+}
+
+.foot_container div {
+    margin-inline: auto;
+    margin-top: 50px;
+}

@@ -8,7 +8,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Luxe &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+	<title>Akory ||otel</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -66,14 +66,22 @@
 
 	<!-- Style -->
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/room.css">
 
 	<!-- Modernizr JS -->
 	<script src="../../plungins/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	 -->
+	<!-- font awesome -->
+	<link href="../../plungins/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
 
+	<!-- Fetch data -->
+	<script src="../js/fetch-data/room-data.js" defer></script>
+</head>
+
+<!-- <![endif]--->
 </head>
 
 <body>
@@ -90,80 +98,6 @@
 									<li><a href="../../index.html">Home</a></li>
 									<li>
 										<a class="active" href="room.html" class="fh5co-sub-ddown">Room</a>
-										<ul class="fh5co-sub-menu">
-											<li>
-												<input type="checkbox" name="categorie_room" value="VIP">
-												<label for="categorie_room">VIP</label>
-												<ul class="fh5co-sub-menu">
-													<li>
-														<input type="Checkbox" name="type_room" value="See view">
-														<label for="type_room">See view</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Hot water">
-														<label for="type_room">Hot water</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Wifi">
-														<label for="type_room">Wifi</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Mini bar">
-														<label for="type_room">Mini bar</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Room Service">
-														<label for="type_room">Room service</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Flat screen">
-														<label for="type_room">Flat screen</label>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<input type="checkbox" name="categorie_room" value="Premium">
-												<label for="categorie_room">Premium</label>
-												<ul class="fh5co-sub-menu">
-													<li>
-														<input type="Checkbox" name="type_room" value="See view">
-														<label for="type_room">See view</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Hot water">
-														<label for="type_room">Hot water</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Wifi">
-														<label for="type_room">Wifi</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Mini bar">
-														<label for="type_room">Mini bar</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Room Service">
-														<label for="type_room">Room service</label>
-													</li>
-													<li>
-														<input type="checkbox" name="type_room" value="Flat screen">
-														<label for="type_room">Flat screen</label>
-													</li>
-												</ul>
-											</li>
-											<!--<li>
-										<a href="#" class="fh5co-sub-ddown">King Hotel</a>
-										<ul class="fh5co-sub-menu">
-											<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Five Star Hotel</a></li>-->
-										</ul>
 									</li>
 									<li><a href="booking.html">Booking</a></li>
 									<li><a href="blog.html">Blog</a></li>
@@ -193,281 +127,143 @@
 				</div>
 			</div>
 
-			<div class="selector">
-				<section>
-					<select name="search-type" id="search-type">
-						<option value="" id="1">Show rooms by given type</option>
-						<option value="" id="2">Show rooms with given price range</option>
-						<option value="" id="3">Show rooms in descending order</option>
-						<option value="" id="4">Show rooms per description</option>
-						<option value="" id="5">Show list of rooms available tomorrow</option>
-						<option value="" id="6">Show list of rooms that meet multiple criteria</option>
-						<option value="" id="7">Show list of currently occupied rooms</option>
-						<option value="" id="8">Show list of current promotion</option>
-						<option value="" id="9">Show the list of rooms with gross their gross price and their net price
-						</option>
-						<option value="" id="10">Show list of rooms available over a given period, with their hotel
-						</option>
-					</select>
-				</section>
-			</div>
 			<!---------------------------- SEARCH BAR ------------------------------->
-			<div class="wrap">
-				<div class="container">
-					<div class="row">
-						<div id="availability">
-							<form action="#">
-								<div class="a-col">
-									<section>
-										<select class="cs-select cs-skin-border" id="choose1">
-											<option value="" disabled selected>Select Province</option>
-											<option value="email">Luxe Hotel</option>
-										</select>
-									</section>
-								</div>
-								<div class="a-col alternate">
-									<div class="input-field" id="choose2">
-										<label for="date-start">Check In</label>
-										<input type="text" class="form-control" id="date-start" />
-									</div>
-								</div>
-								<div class="a-col alternate">
-									<div class="input-field" id="choose3">
-										<label for="date-end">Check Out</label>
-										<input type="text" class="form-control" id="date-end" />
-									</div>
-								</div>
-								<div class="a-col action">
-									<a href="#">
-										<span>Check</span>
-										Availability
-									</a>
-								</div>
-							</form>
+			<div class="seach_bar">
+				<div class="province_room">
+					<div class="province">
+						<div id="province_space">
+							<i class="fa-solid fa-location-dot"></i>
+							<select name="province" id="povince_items">
+								<option value="null">Select Province</option>
+								<option value="Majunga">Majunga</option>
+								<option value="Diego">Diego</option>
+								<option value="Tulear">Tulear</option>
+							</select>
+						</div>
+						<p>AKORY 506</p>
+					</div>
+					<button class="room_type_btn">
+						<div id="occuped">
+							<label for="occuped">Occuped now</label>
+							<input type="checkbox" name="occuped" id="occuped">
+						</div>
+						<div id="room_type">
+							<select name="room_type_select" id="room_type_select">
+								<option value="null">Choose</option>
+								<option value="VIP">VIP</option>
+								<option value="VIP">family</option>
+								<option value="VIP">conference</option>
+							</select>
+							<label for="room_type">type</label>
+						</div>
+					</button>
+				</div>
+
+				<div class="date_features">
+					<div class="date_handler">
+						<div>
+							<div><input type="datetime-local" name="min_date" id="min_date"></div>
+							<div><input type="datetime-local" name="max_date" id="max_date"></div>
+						</div>
+					</div>
+					<div class="room_feature_space">
+						<i id="sea_view" class="fa-solid fa-water"></i>
+						<span id="vip_category">VIP</span>
+						<i id="hot_water" class="fa-solid fa-hot-tub-person"></i>
+						<i id="wifi_available" class="fa-solid fa-wifi"></i>
+						<i id="room_service" class="fa-solid fa-bell-concierge"></i>
+						<i id="mini_bar" class="fa-solid fa-champagne-glasses"></i>
+						<i id="flat_screen" class="fa-solid fa-tv"></i>
+					</div>
+				</div>
+
+				<div class="Price_capacity">
+					<button class="occuped_capacity">
+						<div id="occuped">
+							<label for="promotion">In promotion</label>
+							<input type="checkbox" name="promotion" id="promotion">
+						</div>
+						<div id="capacity">
+							<input type="number" name="capacity" id="capacity">
+							<label for="capacity">Capacity</label>
+						</div>
+					</button>
+					<div class="price_handler">
+						<div id="min_price">
+							<input type="number" name="min_price">
+							<span>MIN</span>
+						</div>
+						<div id="max_price">
+							<input type="number" name="max_price">
+							<span>MAX</span>
+						</div>
+						<p>Price Ariary</p>
+						<div id="croissance_price">
+							<i class="fa-solid fa-arrow-up"></i>
+							<i class="fa-solid fa-arrow-down"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!---------------------------- SEARCH BAR END ------------------------------->
 
-			<!-- Search Section Start 
-	<div id="search">
-		<div class="container">
-			<div class="form-row">
-				<div class="control-group col-md-3">
-					<label>Check-In</label>
-					<div class="form-group">
-						<div class="input-group date" id="date-3" data-target-input="nearest">
-							<input type="text" class="form-control datetimepicker-input" data-target="#date-3"/>
-							<div class="input-group-append" data-target="#date-3" data-toggle="datetimepicker">
-								<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-							</div>
-						</div>
+			<!---------------------------- ROOMS SECTION START ------------------------------->
+
+			<section class="room_serction">
+				<div class="room_conainer">
+					<!-- fetch data -->
+					<!-- <h1>NO ROOMS FOUNDED </h1> -->
+				</div>
+			</section>
+
+			<!---------------------------- ROOMS SECTION END --------------------------------->
+
+
+
+
+			<!-- Search Section End -->
+
+
+
+			<footer class="fh5co-bg-color">
+				<div class="foot_container">
+					<div class="discribe_foot">
+						Akory Hotel is a standard web application platform
+						for hotel reservation management.
+						Designed by the Zah'Geek group on display at HEI University.
 					</div>
-				</div>
-				<div class="control-group col-md-3">
-					<label>Check-Out</label>
-					<div class="form-group">
-						<div class="input-group date" id="date-4" data-target-input="nearest">
-							<input type="text" class="form-control datetimepicker-input" data-target="#date-4"/>
-							<!--<div class="input-group-append" data-target="#date-4" data-toggle="datetimepicker">
-								<div class="input-group-text"><i class="fa fa-calendar"></i></div>
-							</div>
+					<form class="send_message_foot">
+						<div class="message_foot_container">
+							<input type="email" name="email_foot" placeholder="Enter your mail" id="email_foot">
+							<textarea name="message_custom" placeholder="Enter your message" cols="40"
+								id="message_custom"></textarea>
 						</div>
-					</div>
-				</div>
-				<div class="control-group col-md-3">
-					<div class="form-row">
-						<div class="control-group col-md-6">
-							<label>Adult</label>
-							<select class="custom-select">
-								<option selected>0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
-						</div>
-						<div class="control-group col-md-6 kid">
-							<label>Kid</label>
-							<select class="custom-select">
-								<option selected>0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="control-group col-md-3">
-					<button class="btn btn-block">Search</button>
-				</div>
-			</div>
-		</div>
-	</div>
+						<button>SEND</button>
+					</form>
 
-	<!-- Search Section End -->
-
-			<div id="fh5co-hotel-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/room-1.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Twin</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/room-2.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Standart Double</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/room-3.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Familiale VIP</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/room-4.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Silver Double</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/room-5.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Twin</a></h3>
-									<span style="color: black;">Ville : <p>Tananarivo</p></span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hotel-content">
-								<div class="hotel-grid" style="background-image: url(../../public/assets/images/room/image-6.jpg);">
-									<div class="price"><small>For as low as</small><span>$100/night</span></div>
-									<a class="book-now text-center" href="#"><i class="ti-calendar"></i> Book Now</a>
-								</div>
-								<div class="desc">
-									<h3><a href="#">Hotel Name</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
+					<div class="send_text">
+						<div class="page_link">
+							<a href="#">Home</a>
+							<a href="#">Room</a>
+							<a href="#">Booking</a>
+							<a href="#">Blog</a>
+							<a href="#">Contact</a>
 						</div>
 
-					</div>
-				</div>
-			</div>
-
-
-			<footer id="footer" class="fh5co-bg-color">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="copyright">
-								<p><small>&copy; 2016 Free HTML5 Template. <br> All Rights Reserved. <br>
-										Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> <br>
-										Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
-								</p>
-							</div>
+						<div class="sociaux_link">
+							<a href="#"><i class="fa-brands fa-google"></i></a>
+							<a href="#"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#"><i class="fa-solid fa-envelope"></i></a>
+							<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
 						</div>
-						<div class="col-md-6">
-							<div class="row">
-								<div class="col-md-3">
-									<h3>Company</h3>
-									<ul class="link">
-										<li><a href="#">About Us</a></li>
-										<li><a href="#">Hotels</a></li>
-										<li><a href="#">Customer Care</a></li>
-										<li><a href="#">Contact Us</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3">
-									<h3>Our Facilities</h3>
-									<ul class="link">
-										<li><a href="#">Resturant</a></li>
-										<li><a href="#">Bars</a></li>
-										<li><a href="#">Pick-up</a></li>
-										<li><a href="#">Swimming Pool</a></li>
-										<li><a href="#">Spa</a></li>
-										<li><a href="#">Gym</a></li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<h3>Subscribe</h3>
-									<p>Sed cursus ut nibh in semper. Mauris varius et magna in fermentum. </p>
-									<form action="#" id="form-subscribe">
-										<div class="form-field">
-											<input type="email" placeholder="Email Address" id="email">
-											<input type="submit" id="submit" value="Send">
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<ul class="social-icons">
-								<li>
-									<a href="#"><i class="icon-twitter-with-circle"></i></a>
-									<a href="#"><i class="icon-facebook-with-circle"></i></a>
-									<a href="#"><i class="icon-instagram-with-circle"></i></a>
-									<a href="#"><i class="icon-linkedin-with-circle"></i></a>
-								</li>
-							</ul>
+						<div class="text_invitation">
+							Don't hesitate to contact us if you want to send something.
+							We are open to any suggestions.
+							send us your message here
 						</div>
 					</div>
 				</div>
 			</footer>
-
 		</div>
 		<!-- END fh5co-page -->
 
