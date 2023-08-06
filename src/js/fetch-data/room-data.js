@@ -1,12 +1,19 @@
-const filterBytype = () => {
+const filterByType = () => {
     const roomTypeSelect = document.querySelector("#room_type_select");
     const selectedTypeValue = roomTypeSelect.value;
     return selectedTypeValue;
 }
+
 const filterByProvince = () => {
     const roomTypeSelect = document.querySelector("#povince_items");
     const selectedTypeValue = roomTypeSelect.value;
     return selectedTypeValue;
+}
+
+const filterByPromotion = () => {
+    const roomPromotionSelect = document.querySelector("#promotion");
+    const selectedPromotionValue = roomPromotionSelect.checked;
+    return selectedPromotionValue;
 }
 
 function afficherDonnees(data) {
@@ -118,11 +125,12 @@ function getRoomsListNetAndGrosPrice() {
         })
         .then(data => {
             if (data && Array.isArray(data)) {
-                const selectedType = filterBytype();
+                const selectedType = filterByType();
                 const selectedProvince = filterByProvince();
+                const selectedPromotion = filterByPromotion();
                 let filteredData = data.filter(room => room.room_type === selectedType)
-                    .filter(room => room.province_name === selectedProvince);
-
+                    .filter(room => room.province_name === selectedProvince)
+                    .filter(room => selectedPromotion ? room.percent !== null : true);
 
                 afficherDonnees(filteredData);
 
@@ -138,19 +146,37 @@ function getRoomsListNetAndGrosPrice() {
                     afficherDonnees(filteredData);
                 });
 
-                //   filter actualise by type:
+                // Filter actualise by type:
                 const roomTypeSelect = document.querySelector("#room_type_select");
                 roomTypeSelect.addEventListener('change', () => {
-                    const newSelectedType = filterBytype();
-                    filteredData = data.filter(room => room.room_type === newSelectedType);
+                    const newSelectedType = filterByType();
+                    filteredData = data.filter(room => room.room_type === newSelectedType)
+                        .filter(room => room.province_name === selectedProvince)
+                        .filter(room => selectedPromotion ? room.percent !== null : room);
+
                     afficherDonnees(filteredData);
                 });
-                //   filter actualise by type:
+
+                // Filter actualise by province:
                 const provinceSelect = document.querySelector("#povince_items");
                 provinceSelect.addEventListener('change', () => {
                     const newSelectedProvince = filterByProvince();
                     filteredData = data.filter(room => room.room_type === selectedType)
-                        .filter(room => room.province_name === newSelectedProvince);
+                        .filter(room => room.province_name === newSelectedProvince)
+                        .filter(room => selectedPromotion ? room.percent !== null : room);
+
+                    afficherDonnees(filteredData);
+                });
+
+
+                // Filter actualise by promotion:
+                const promotionSelect = document.querySelector("#promotion");
+                promotionSelect.addEventListener('change', () => {
+                    const newSelectedPromotion = filterByPromotion();
+                    filteredData = data.filter(room => room.room_type === selectedType)
+                        .filter(room => room.province_name === selectedProvince)
+                        .filter(room => newSelectedPromotion ? room.percent !== null : true);
+
                     afficherDonnees(filteredData);
                 });
             } else {
