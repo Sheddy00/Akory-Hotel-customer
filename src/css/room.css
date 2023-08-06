@@ -1,6 +1,7 @@
 :root {
     --onecolor: orange;
     --onetext: black;
+    --twocolor: rgba(255, 166, 0, 0.623);
 }
 
 #province_space,
@@ -335,7 +336,8 @@
 /* room container start */
 .room_conainer {
     width: fit-content;
-    gap: 200px;
+    justify-content: space-between;
+    gap: 90px;
     flex-wrap: wrap;
     margin-inline: auto;
 }
@@ -450,6 +452,7 @@
     font-weight: 1000;
     padding-left: 12px;
     padding-top: 12px;
+    background-color: var(--twocolor) ;
 }
 
 .room_details_content {
@@ -461,6 +464,10 @@
     justify-content: space-between;
 }
 
+.star_color{
+    color: var(--onecolor);
+}
+
 .room_description_with_prommotion {
     font-size: 15px;
     margin-top: -20px;
@@ -469,7 +476,6 @@
 .room_description_without_prommotion {
     font-size: 15px;
     margin-top: -20px;
-    display: none;
 }
 
 .room_hotel {
