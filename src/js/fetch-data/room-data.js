@@ -3,6 +3,11 @@ const filterBytype = () => {
     const selectedTypeValue = roomTypeSelect.value;
     return selectedTypeValue;
 }
+const filterByProvince = () => {
+    const roomTypeSelect = document.querySelector("#povince_items");
+    const selectedTypeValue = roomTypeSelect.value;
+    return selectedTypeValue;
+}
 
 function afficherDonnees(data) {
     const roomListDiv = document.querySelector(".room_conainer");
@@ -18,10 +23,10 @@ function afficherDonnees(data) {
             const imagePath = room.images_paths ?
                 `./../../../../../../../../..${room.images_paths.replace(/\s/g, '\\ ')}` :
                 "../../public/assets/images/alt_image.png";
-            
+
             const promotionsDayValue = room.promotions_day
-            ? parseFloat(room.promotions_day).toFixed(2) : null;
-    
+                ? parseFloat(room.promotions_day).toFixed(2) : null;
+
             const roomDiv = document.createElement("div");
             roomDiv.innerHTML = `
                 <div class="room_items">
@@ -34,33 +39,31 @@ function afficherDonnees(data) {
                     <div class="name_rate">
                         <p id="room_type_name">${room.room_type}</p>
                         <div class="room_rate">
-                        ${
-                            room.room_type === "solo"
-                                ? `<i class="fa-solid fa-star star_color"></i>
+                        ${room.room_type === "solo"
+                    ? `<i class="fa-solid fa-star star_color"></i>
                                    <i class="fa-solid fa-star"></i>
                                    <i class="fa-solid fa-star"></i>`
-                                : room.room_type === "twin" || room.room_type === "family"
-                                ? `<i class="fa-solid fa-star star_color"></i>
+                    : room.room_type === "twin" || room.room_type === "family"
+                        ? `<i class="fa-solid fa-star star_color"></i>
                                    <i class="fa-solid fa-star star_color"></i>
                                    <i class="fa-solid fa-star"></i>`
-                                : room.room_type === "VIP"
-                                ? `<i class="fa-solid fa-star star_color"></i>
+                        : room.room_type === "VIP"
+                            ? `<i class="fa-solid fa-star star_color"></i>
                                    <i class="fa-solid fa-star star_color"></i>
                                    <i class="fa-solid fa-star star_color"></i>`
-                                : ''
-                        }
+                            : ''
+                }
                         </div>
                     </div>
     
                     <p id="room_hotel">
                     <div id="room_location">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>${room.hotel} </span> <span id="location"> Antananarivo</span>
+                        <span>${room.hotel} </span> <span id="location"> ${room.province_name} - ${room.code_province}</span>
                     </div>
                     </p>
-                    ${
-                        room.percent ?
-                        ` <div class="room_description_with_prommotion">
+                    ${room.percent ?
+                    ` <div class="room_description_with_prommotion">
                             This is your chance to take advantage, as the price is reduced by
                             <span id="netPrice"> ${promotionsDayValue}Ar/nigth</span>
                             until the end of promotion
@@ -69,13 +72,13 @@ function afficherDonnees(data) {
                             While the net price is:
                             <span id="net_price"> ${room.price}/night</span>
                         </div> `
-                        :
+                    :
                     ` <div class="room_description_without_prommotion">
                             Even if there are no promotions during this
                             period, the price remains affordable:
                             <span id="net_price"> ${room.price}/night</span>
                     </div>`
-                    }
+                }
                 </div>
                 <div class="room_booking_content">
                     <p id="booking_now">BOOKING NOW: </p>
@@ -95,8 +98,8 @@ function afficherDonnees(data) {
         </div>
         `
             roomListDiv.appendChild(roomDiv);
-        });        
-        
+        });
+
     }
 }
 
@@ -115,10 +118,11 @@ function getRoomsListNetAndGrosPrice() {
         })
         .then(data => {
             if (data && Array.isArray(data)) {
-
                 const selectedType = filterBytype();
-                let filteredData = data.filter(room => room.room_type === selectedType);
-                
+                const selectedProvince = filterByProvince();
+                let filteredData = data.filter(room => room.room_type === selectedType)
+                    .filter(room => room.province_name === selectedProvince);
+
 
                 afficherDonnees(filteredData);
 
@@ -134,13 +138,21 @@ function getRoomsListNetAndGrosPrice() {
                     afficherDonnees(filteredData);
                 });
 
-                 //   filter actualise by type:
-                 const roomTypeSelect = document.querySelector("#room_type_select");
-                 roomTypeSelect.addEventListener('change', () => {
-                     const newSelectedType = filterBytype();
-                     filteredData = data.filter(room => room.room_type === newSelectedType);
-                     afficherDonnees(filteredData);
-                 });
+                //   filter actualise by type:
+                const roomTypeSelect = document.querySelector("#room_type_select");
+                roomTypeSelect.addEventListener('change', () => {
+                    const newSelectedType = filterBytype();
+                    filteredData = data.filter(room => room.room_type === newSelectedType);
+                    afficherDonnees(filteredData);
+                });
+                //   filter actualise by type:
+                const provinceSelect = document.querySelector("#povince_items");
+                provinceSelect.addEventListener('change', () => {
+                    const newSelectedProvince = filterByProvince();
+                    filteredData = data.filter(room => room.room_type === selectedType)
+                        .filter(room => room.province_name === newSelectedProvince);
+                    afficherDonnees(filteredData);
+                });
             } else {
                 const errorMessageDiv = document.querySelector(".error_message");
                 errorMessageDiv.textContent = "Une erreur s'est produite : Données invalides.";
