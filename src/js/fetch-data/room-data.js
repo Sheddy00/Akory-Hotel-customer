@@ -1,3 +1,9 @@
+const filterBytype = () => {
+    const roomTypeSelect = document.querySelector("#room_type_select");
+    const selectedTypeValue = roomTypeSelect.value;
+    return selectedTypeValue;
+}
+
 function afficherDonnees(data) {
     const roomListDiv = document.querySelector(".room_conainer");
     roomListDiv.innerHTML = ''; // Clear previous data
@@ -53,7 +59,7 @@ function afficherDonnees(data) {
                     </div>
                     </p>
                     ${
-                        room.promotions_day ?
+                        room.percent ?
                         ` <div class="room_description_with_prommotion">
                             This is your chance to take advantage, as the price is reduced by
                             <span id="netPrice"> ${promotionsDayValue}Ar/nigth</span>
@@ -109,19 +115,32 @@ function getRoomsListNetAndGrosPrice() {
         })
         .then(data => {
             if (data && Array.isArray(data)) {
-                afficherDonnees(data);
+
+                const selectedType = filterBytype();
+                let filteredData = data.filter(room => room.room_type === selectedType);
+                
+
+                afficherDonnees(filteredData);
 
                 const ascByPrice = document.querySelector("#asc_by_price");
                 ascByPrice.addEventListener('click', () => {
-                    data.sort((a, b) => a.price - b.price);
-                    afficherDonnees(data);
+                    filteredData.sort((a, b) => a.promotions_day - b.promotions_day);
+                    afficherDonnees(filteredData);
                 });
 
                 const descByPrice = document.querySelector("#desc_by_price");
                 descByPrice.addEventListener('click', () => {
-                    data.sort((a, b) => b.price - a.price);
-                    afficherDonnees(data);
+                    filteredData.sort((a, b) => b.promotions_day - a.promotions_day);
+                    afficherDonnees(filteredData);
                 });
+
+                 //   filter actualise by type:
+                 const roomTypeSelect = document.querySelector("#room_type_select");
+                 roomTypeSelect.addEventListener('change', () => {
+                     const newSelectedType = filterBytype();
+                     filteredData = data.filter(room => room.room_type === newSelectedType);
+                     afficherDonnees(filteredData);
+                 });
             } else {
                 const errorMessageDiv = document.querySelector(".error_message");
                 errorMessageDiv.textContent = "Une erreur s'est produite : Données invalides.";
