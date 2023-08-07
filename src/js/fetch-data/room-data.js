@@ -16,6 +16,13 @@ const filterByPromotion = () => {
     return selectedPromotionValue;
 }
 
+const filterByCapacity = () => {
+    const capacityInput = document.getElementById("capacity_input");
+    return parseInt(capacityInput.value); // Convert input to integer
+}
+
+
+// ---------------------------------------------------------
 function afficherDonnees(data) {
     const roomListDiv = document.querySelector(".room_conainer");
     roomListDiv.innerHTML = ''; // Clear previous data
@@ -102,6 +109,9 @@ function afficherDonnees(data) {
                     ${room.flat_screen ? `<i id="flat_screen" class="fa-solid fa-tv"></i>` : ''}
                     </div>
                 </div>
+                <div class = "room_capacity">
+                    ${room.capacity_room}
+                </div>
         </div>
         `
             roomListDiv.appendChild(roomDiv);
@@ -114,6 +124,7 @@ function handleError(error) {
     const errorDiv = document.querySelector(".error_message");
     errorDiv.textContent = "Une erreur s'est produite : " + error;
 }
+
 
 function getRoomsListNetAndGrosPrice() {
     fetch("http://localhost:8000/RoomsListNetAndGrosPrice")
@@ -128,18 +139,21 @@ function getRoomsListNetAndGrosPrice() {
                 const selectedType = filterByType();
                 const selectedProvince = filterByProvince();
                 const selectedPromotion = filterByPromotion();
+                const selectedCapacity = filterByCapacity();
                 let filteredData = data.filter(room => room.room_type === selectedType)
                     .filter(room => room.province_name === selectedProvince)
-                    .filter(room => selectedPromotion ? room.percent !== null : true);
-
+                    .filter(room => selectedPromotion ? room.percent !== null : true)
+                    .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true);
                 afficherDonnees(filteredData);
 
+                // asc by price
                 const ascByPrice = document.querySelector("#asc_by_price");
                 ascByPrice.addEventListener('click', () => {
                     filteredData.sort((a, b) => a.promotions_day - b.promotions_day);
                     afficherDonnees(filteredData);
                 });
 
+                // desc by price
                 const descByPrice = document.querySelector("#desc_by_price");
                 descByPrice.addEventListener('click', () => {
                     filteredData.sort((a, b) => b.promotions_day - a.promotions_day);
@@ -150,9 +164,7 @@ function getRoomsListNetAndGrosPrice() {
                 const roomTypeSelect = document.querySelector("#room_type_select");
                 roomTypeSelect.addEventListener('change', () => {
                     const newSelectedType = filterByType();
-                    filteredData = data.filter(room => room.room_type === newSelectedType)
-                        .filter(room => room.province_name === selectedProvince)
-                        .filter(room => selectedPromotion ? room.percent !== null : room);
+                    filteredData = data.filter(room => room.room_type === newSelectedType);
 
                     afficherDonnees(filteredData);
                 });
@@ -163,7 +175,6 @@ function getRoomsListNetAndGrosPrice() {
                     const newSelectedProvince = filterByProvince();
                     filteredData = data.filter(room => room.room_type === selectedType)
                         .filter(room => room.province_name === newSelectedProvince)
-                        .filter(room => selectedPromotion ? room.percent !== null : room);
 
                     afficherDonnees(filteredData);
                 });
@@ -179,6 +190,21 @@ function getRoomsListNetAndGrosPrice() {
 
                     afficherDonnees(filteredData);
                 });
+
+                // Filter actualise by capacity:
+                const capacitySelect = document.querySelector("#capacity_input");
+                capacitySelect.addEventListener('change', () => {
+                    const newSelectedPromotion = filterByPromotion();
+                    const newSelectedCapacity = filterByCapacity();
+                    filteredData = data.filter(room => room.room_type === selectedType)
+                        .filter(room => room.province_name === selectedProvince)
+                        .filter(room => newSelectedPromotion ? room.percent !== null : true)
+                        .filter(room => newSelectedCapacity != null ? (room.capacity_room >= newSelectedCapacity) : true);
+
+                    afficherDonnees(filteredData);
+                });
+
+
             } else {
                 const errorMessageDiv = document.querySelector(".error_message");
                 errorMessageDiv.textContent = "Une erreur s'est produite : Données invalides.";

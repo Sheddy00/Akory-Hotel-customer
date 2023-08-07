@@ -5,3 +5,18 @@ bookingViaRoom.forEach(el => {
         window.location.href = "./booking.html";
     });
 });
+
+// const roomFeatureIcons = document.querySelectorAll(".features_icon");
+// roomFeatureIcons.forEach(icon => {
+//     icon.addEventListener("click", (ev) => {
+//         console.log(icon.getAttribute("data-active"))
+//         ev.stopPropagation();
+//         if (icon.getAttribute("data-active") === false) {
+//             icon.classList.add('star_color');
+//             icon.setAttribute("data-active", "true");
+//         } else {
+//             icon.classList.remove('star_color');
+//             icon.setAttribute("data-active", "false");
+//         }
+//     });
+// });

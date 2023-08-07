@@ -6,7 +6,7 @@
 
 #province_space,
 #occuped,
-#capacity,
+#capacity_input,
 .occuped_capacity,
 .room_type_btn,
 #room_type,
@@ -159,7 +159,7 @@
 }
 
 
-#capacity {
+#capacity_input {
     width: 76px;
     border: none;
     outline: none;
@@ -168,7 +168,7 @@
 }
 
 #occuped label,
-#capacity label {
+#capacity_input label {
     color: var(--onetext);
     font-size: 10px;
 }
@@ -652,4 +652,22 @@ footer {
 .foot_container div {
     margin-inline: auto;
     margin-top: 50px;
+}
+
+.room_capacity {
+    color: var(--onecolor);
+    position: absolute;
+    right: -25px;
+    bottom: -20px;
+    width: 50px;
+    height: 50px ;
+    border: 1px var(--onecolor) solid;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+
 }

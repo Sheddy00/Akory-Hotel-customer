@@ -79,6 +79,7 @@
 
 	<!-- Fetch data -->
 	<script src="../js/fetch-data/room-data.js" defer></script>
+	<script src="../js/room.js" defer></script>
 </head>
 
 <!-- <![endif]--->
@@ -171,14 +172,14 @@
 						</div>
 					</div>
 					<div class="room_feature_space">
-						<i id="sea_view" class="fa-solid fa-water"></i>
-						<span id="vip_category">VIP</span>
-						<i id="hot_water" class="fa-solid fa-hot-tub-person"></i>
-						<i id="wifi_available" class="fa-solid fa-wifi"></i>
-						<i id="room_service" class="fa-solid fa-bell-concierge"></i>
-						<i id="mini_bar" class="fa-solid fa-champagne-glasses"></i>
-						<i id="flat_screen" class="fa-solid fa-tv"></i>
-					</div>
+						<i id="sea_view" class="features_icon fa-solid fa-water" data-active ="false"></i>
+						<span id="vip_category" class="features_icon" data-active="false">VIP</span>
+						<i id="hot_water" class="features_icon fa-solid fa-hot-tub-person" data-active="false"></i>
+						<i id="wifi_available" class="features_icon  fa-solid fa-wifi" data-active="false"></i>
+						<i id="room_service" class="features_icon  fa-solid fa-bell-concierge" data-active="false"></i>
+						<i id="mini_bar" class="features_icon fa-solid fa-champagne-glasses" data-active="false"></i>
+						<i id="flat_screen" class="features_icon  fa-solid fa-tv" data-active="false"></i>
+					</div> 
 				</div>
 
 				<div class="Price_capacity">
@@ -188,7 +189,7 @@
 							<input type="checkbox" name="promotion" id="promotion" checked="false">
 						</div>
 						<div id="capacity">
-							<input type="number" name="capacity" id="capacity">
+							<input type="number" name="capacity" id="capacity_input">
 							<label for="capacity">Capacity</label>
 						</div>
 					</button>
