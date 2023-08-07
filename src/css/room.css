@@ -1,11 +1,12 @@
 :root {
     --onecolor: orange;
     --onetext: black;
+    --twocolor: rgba(255, 166, 0, 0.623);
 }
 
 #province_space,
 #occuped,
-#capacity,
+#capacity_input,
 .occuped_capacity,
 .room_type_btn,
 #room_type,
@@ -121,7 +122,7 @@
     border-right: 3px var(--onecolor) solid;
 }
 
-#povince_items {
+#province_items {
     text-align: center;
     width: fit-content;
     margin: 5px auto;
@@ -158,7 +159,7 @@
 }
 
 
-#capacity {
+#capacity_input {
     width: 76px;
     border: none;
     outline: none;
@@ -167,7 +168,7 @@
 }
 
 #occuped label,
-#capacity label {
+#capacity_input label {
     color: var(--onetext);
     font-size: 10px;
 }
@@ -335,7 +336,8 @@
 /* room container start */
 .room_conainer {
     width: fit-content;
-    gap: 200px;
+    justify-content: space-between;
+    gap: 90px;
     flex-wrap: wrap;
     margin-inline: auto;
 }
@@ -450,6 +452,7 @@
     font-weight: 1000;
     padding-left: 12px;
     padding-top: 12px;
+    background-color: var(--twocolor) ;
 }
 
 .room_details_content {
@@ -461,6 +464,10 @@
     justify-content: space-between;
 }
 
+.star_color{
+    color: var(--onecolor);
+}
+
 .room_description_with_prommotion {
     font-size: 15px;
     margin-top: -20px;
@@ -469,7 +476,6 @@
 .room_description_without_prommotion {
     font-size: 15px;
     margin-top: -20px;
-    display: none;
 }
 
 .room_hotel {
@@ -646,4 +652,22 @@ footer {
 .foot_container div {
     margin-inline: auto;
     margin-top: 50px;
+}
+
+.room_capacity {
+    color: var(--onecolor);
+    position: absolute;
+    right: -25px;
+    bottom: -20px;
+    width: 50px;
+    height: 50px ;
+    border: 1px var(--onecolor) solid;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+
 }

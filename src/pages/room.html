@@ -78,7 +78,9 @@
 	<link href="../../plungins/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
 
 	<!-- Fetch data -->
+	<script src="../js/room.js" defer></script>
 	<script src="../js/fetch-data/room-data.js" defer></script>
+	
 </head>
 
 <!-- <![endif]--->
@@ -131,14 +133,17 @@
 					<div class="province">
 						<div id="province_space">
 							<i class="fa-solid fa-location-dot"></i>
-							<select name="province" id="povince_items">
+							<select name="province" id="province_items">
 								<option value="null">Select Province</option>
-								<option value="Majunga">Majunga</option>
-								<option value="Diego">Diego</option>
-								<option value="Tulear">Tulear</option>
+								<option value="Nosy Be">Nosy Be</option>
+								<option value="Antsiranana">Antsiranana</option>
+								<option value="Toliara">Toliara</option>
+								<option value="Toamasina">Toamasina</option>
+								<option value="Fianarantsoa">Fianarantsoa</option>
+								<option value="Antananarivo">Antananarivo</option>
 							</select>
 						</div>
-						<p>AKORY 506</p>
+						<p>AKORY HOTEL</p>
 					</div>
 					<button class="room_type_btn">
 						<div id="occuped">
@@ -149,8 +154,9 @@
 							<select name="room_type_select" id="room_type_select">
 								<option value="null">Choose</option>
 								<option value="VIP">VIP</option>
-								<option value="VIP">family</option>
-								<option value="VIP">conference</option>
+								<option value="twin">twin</option>
+								<option value="family">family</option>
+								<option value="solo">solo</option>
 							</select>
 							<label for="room_type">type</label>
 						</div>
@@ -165,30 +171,30 @@
 						</div>
 					</div>
 					<div class="room_feature_space">
-						<i id="sea_view" class="fa-solid fa-water"></i>
-						<span id="vip_category">VIP</span>
-						<i id="hot_water" class="fa-solid fa-hot-tub-person"></i>
-						<i id="wifi_available" class="fa-solid fa-wifi"></i>
-						<i id="room_service" class="fa-solid fa-bell-concierge"></i>
-						<i id="mini_bar" class="fa-solid fa-champagne-glasses"></i>
-						<i id="flat_screen" class="fa-solid fa-tv"></i>
-					</div>
+						<i id="sea_view" class="features_icon fa-solid fa-water" data-active ="false"></i>
+						<span id="vip_category" class="features_icon" data-active="false">VIP</span>
+						<i id="hot_water" class="features_icon fa-solid fa-hot-tub-person" data-active="false"></i>
+						<i id="wifi_available" class="features_icon  fa-solid fa-wifi" data-active="false"></i>
+						<i id="room_service" class="features_icon  fa-solid fa-bell-concierge" data-active="false"></i>
+						<i id="mini_bar" class="features_icon fa-solid fa-champagne-glasses" data-active="false"></i>
+						<i id="flat_screen" class="features_icon  fa-solid fa-tv" data-active="false"></i>
+					</div> 
 				</div>
 
 				<div class="Price_capacity">
 					<button class="occuped_capacity">
 						<div id="occuped">
 							<label for="promotion">In promotion</label>
-							<input type="checkbox" name="promotion" id="promotion">
+							<input type="checkbox" name="promotion" id="promotion" checked="false">
 						</div>
 						<div id="capacity">
-							<input type="number" name="capacity" id="capacity">
+							<input type="number" name="capacity" id="capacity_input">
 							<label for="capacity">Capacity</label>
 						</div>
 					</button>
 					<div class="price_handler">
 						<div id="min_price">
-							<input type="number" name="min_price">
+							<input type="number" name="min_price"> 
 							<span>MIN</span>
 						</div>
 						<div id="max_price">
@@ -196,17 +202,17 @@
 							<span>MAX</span>
 						</div>
 						<p>Price Ariary</p>
-						<div id="croissance_price">
-							<i class="fa-solid fa-arrow-up"></i>
-							<i class="fa-solid fa-arrow-down"></i>
+						<div class="sorting_buttons" id="croissance_price">
+							<i id="desc_by_price" class="fa-solid fa-arrow-up"></i>
+							<i id="asc_by_price" class="fa-solid fa-arrow-down"></i>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!---------------------------- SEARCH BAR END ------------------------------->
-
+			<!-- <img src="../../../Akory-Hotel-Back-end-server/public/images/1691305447569-room-1.jpg" alt="room"> -->
+			<!-- <img src="../../../../../../../../../home/finaritra/Public/HEI/2- Donnée--1/Exposé-Za-Geeck/Akory-Hotel-Back-end-server/public/images/1691305414688-room-1.jpg" alt="room"> -->
 			<!---------------------------- ROOMS SECTION START ------------------------------->
-
 			<section class="room_serction">
 				<div class="room_conainer">
 					<!-- fetch data -->
@@ -216,7 +222,7 @@
 
 			<!---------------------------- ROOMS SECTION END --------------------------------->
 
-
+			<!-- Akory-Hotel-Back-end-server/public/images/1691305414688-room-1.jpg -->
 
 
 			<!-- Search Section End -->
