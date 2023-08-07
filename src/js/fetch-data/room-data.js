@@ -5,7 +5,7 @@ const filterByType = () => {
 }
 
 const filterByProvince = () => {
-    const roomTypeSelect = document.querySelector("#povince_items");
+    const roomTypeSelect = document.querySelector("#province_items");
     const selectedTypeValue = roomTypeSelect.value;
     return selectedTypeValue;
 }
@@ -125,7 +125,6 @@ function handleError(error) {
     errorDiv.textContent = "Une erreur s'est produite : " + error;
 }
 
-
 function getRoomsListNetAndGrosPrice() {
     fetch("http://localhost:8000/RoomsListNetAndGrosPrice")
         .then(response => {
@@ -136,74 +135,58 @@ function getRoomsListNetAndGrosPrice() {
         })
         .then(data => {
             if (data && Array.isArray(data)) {
-                const selectedType = filterByType();
-                const selectedProvince = filterByProvince();
-                const selectedPromotion = filterByPromotion();
-                const selectedCapacity = filterByCapacity();
-                let filteredData = data.filter(room => room.room_type === selectedType)
+                const roomTypeSelect = document.querySelector("#room_type_select");
+                const provinceSelect = document.querySelector("#province_items");
+                const promotionSelect = document.querySelector("#promotion");
+                const capacitySelect = document.querySelector("#capacity_input");
+                
+                // Move filter selections outside of event listeners to capture the current values
+                let selectedType = filterByType();
+                let selectedProvince = filterByProvince();
+                let selectedPromotion = filterByPromotion();
+                let selectedCapacity = filterByCapacity();
+
+                const filteredData = data.filter(room => room.room_type === selectedType)
                     .filter(room => room.province_name === selectedProvince)
                     .filter(room => selectedPromotion ? room.percent !== null : true)
                     .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true);
-                afficherDonnees(filteredData);
 
-                // asc by price
+                // Define a function to update filtered data and re-render
+                const updateFilteredDataAndRender = () => {
+                    selectedType = filterByType();
+                    selectedProvince = filterByProvince();
+                    selectedPromotion = filterByPromotion();
+                    selectedCapacity = filterByCapacity();
+
+                    const updatedFilteredData = data.filter(room => room.room_type === selectedType)
+                        .filter(room => room.province_name === selectedProvince)
+                        .filter(room => selectedPromotion ? room.percent !== null : true)
+                        .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true);
+
+                    afficherDonnees(updatedFilteredData);
+                };
+
+                // Add event listeners for filter changes
+                roomTypeSelect.addEventListener('change', updateFilteredDataAndRender);
+                provinceSelect.addEventListener('change', updateFilteredDataAndRender);
+                promotionSelect.addEventListener('change', updateFilteredDataAndRender);
+                capacitySelect.addEventListener('change', updateFilteredDataAndRender);
+
+                // Sorting functions (asc by price and desc by price)
                 const ascByPrice = document.querySelector("#asc_by_price");
                 ascByPrice.addEventListener('click', () => {
                     filteredData.sort((a, b) => a.promotions_day - b.promotions_day);
                     afficherDonnees(filteredData);
                 });
 
-                // desc by price
                 const descByPrice = document.querySelector("#desc_by_price");
                 descByPrice.addEventListener('click', () => {
                     filteredData.sort((a, b) => b.promotions_day - a.promotions_day);
                     afficherDonnees(filteredData);
                 });
 
-                // Filter actualise by type:
-                const roomTypeSelect = document.querySelector("#room_type_select");
-                roomTypeSelect.addEventListener('change', () => {
-                    const newSelectedType = filterByType();
-                    filteredData = data.filter(room => room.room_type === newSelectedType);
-
-                    afficherDonnees(filteredData);
-                });
-
-                // Filter actualise by province:
-                const provinceSelect = document.querySelector("#povince_items");
-                provinceSelect.addEventListener('change', () => {
-                    const newSelectedProvince = filterByProvince();
-                    filteredData = data.filter(room => room.room_type === selectedType)
-                        .filter(room => room.province_name === newSelectedProvince)
-
-                    afficherDonnees(filteredData);
-                });
-
-
-                // Filter actualise by promotion:
-                const promotionSelect = document.querySelector("#promotion");
-                promotionSelect.addEventListener('change', () => {
-                    const newSelectedPromotion = filterByPromotion();
-                    filteredData = data.filter(room => room.room_type === selectedType)
-                        .filter(room => room.province_name === selectedProvince)
-                        .filter(room => newSelectedPromotion ? room.percent !== null : true);
-
-                    afficherDonnees(filteredData);
-                });
-
-                // Filter actualise by capacity:
-                const capacitySelect = document.querySelector("#capacity_input");
-                capacitySelect.addEventListener('change', () => {
-                    const newSelectedPromotion = filterByPromotion();
-                    const newSelectedCapacity = filterByCapacity();
-                    filteredData = data.filter(room => room.room_type === selectedType)
-                        .filter(room => room.province_name === selectedProvince)
-                        .filter(room => newSelectedPromotion ? room.percent !== null : true)
-                        .filter(room => newSelectedCapacity != null ? (room.capacity_room >= newSelectedCapacity) : true);
-
-                    afficherDonnees(filteredData);
-                });
-
+                // Initial data rendering
+                afficherDonnees(filteredData);
 
             } else {
                 const errorMessageDiv = document.querySelector(".error_message");
