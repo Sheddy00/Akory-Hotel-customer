@@ -21,6 +21,13 @@ const filterByCapacity = () => {
     return parseInt(capacityInput.value); // Convert input to integer
 }
 
+const filterByPriceInterval = () => {
+    const minPriceInput = document.querySelector('#min_price input[type="number"]');
+    const maxPriceInput = document.querySelector('#max_price input[type="number"]');
+
+    return [minPriceInput.value, maxPriceInput.value];
+}
+
 
 // ---------------------------------------------------------
 function afficherDonnees(data) {
@@ -125,6 +132,7 @@ function handleError(error) {
     errorDiv.textContent = "Une erreur s'est produite : " + error;
 }
 
+// ------------------------------------------------------------
 function getRoomsListNetAndGrosPrice() {
     fetch("http://localhost:8000/RoomsListNetAndGrosPrice")
         .then(response => {
@@ -139,17 +147,22 @@ function getRoomsListNetAndGrosPrice() {
                 const provinceSelect = document.querySelector("#province_items");
                 const promotionSelect = document.querySelector("#promotion");
                 const capacitySelect = document.querySelector("#capacity_input");
-                
+                const minPriceInput = document.querySelector('#min_price input[type="number"]');
+                const maxPriceInput = document.querySelector('#max_price input[type="number"]');
+
                 // Move filter selections outside of event listeners to capture the current values
                 let selectedType = filterByType();
                 let selectedProvince = filterByProvince();
                 let selectedPromotion = filterByPromotion();
                 let selectedCapacity = filterByCapacity();
+                let priceTableInterval = filterByPriceInterval();
 
                 const filteredData = data.filter(room => room.room_type === selectedType)
                     .filter(room => room.province_name === selectedProvince)
                     .filter(room => selectedPromotion ? room.percent !== null : true)
-                    .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true);
+                    .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true)
+                    .filter(room => priceTableInterval != null
+                        ? (room.promotions_day >= priceTableInterval[0] && room.promotions_day <= priceTableInterval[1]) : true);
 
                 // Define a function to update filtered data and re-render
                 const updateFilteredDataAndRender = () => {
@@ -157,11 +170,15 @@ function getRoomsListNetAndGrosPrice() {
                     selectedProvince = filterByProvince();
                     selectedPromotion = filterByPromotion();
                     selectedCapacity = filterByCapacity();
+                    priceTableInterval = filterByPriceInterval();
 
                     const updatedFilteredData = data.filter(room => room.room_type === selectedType)
                         .filter(room => room.province_name === selectedProvince)
                         .filter(room => selectedPromotion ? room.percent !== null : true)
-                        .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true);
+                        .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true)
+                        .filter(room => priceTableInterval != null
+                            ? (room.promotions_day >= priceTableInterval[0] && room.promotions_day <= priceTableInterval[1]) : true);
+    
 
                     afficherDonnees(updatedFilteredData);
                 };
@@ -171,6 +188,8 @@ function getRoomsListNetAndGrosPrice() {
                 provinceSelect.addEventListener('change', updateFilteredDataAndRender);
                 promotionSelect.addEventListener('change', updateFilteredDataAndRender);
                 capacitySelect.addEventListener('change', updateFilteredDataAndRender);
+                minPriceInput.addEventListener('change', updateFilteredDataAndRender);
+                maxPriceInput.addEventListener('change', updateFilteredDataAndRender);
 
                 // Sorting functions (asc by price and desc by price)
                 const ascByPrice = document.querySelector("#asc_by_price");
