@@ -5,162 +5,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <title>Akory ||otel</title>
-=======
-  <title>LOGIN</title>
->>>>>>> 31bc1c39d6ce45d6b28064ac540e9b0e63c1c7b5
+  <title>Document</title>
   <link rel="stylesheet" href="../css/login.css">
-  <link rel="stylesheet" href="../../plungins/sass/bootstrap-5.0.2-dist/css/bootstrap.css">
-
 </head>
-
 <body>
-  <!-- Pills navs -->
-  <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-        aria-controls="pills-login" aria-selected="true">Login</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
-        aria-controls="pills-register" aria-selected="false">Register</a>
-    </li>
-  </ul>
-  <!-- Pills navs -->
-
-  <!-- Pills content -->
-  <div class="tab-content">
-    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-      <form>
-        <div class="text-center mb-3">
-          <p>Sign in with:</p>
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-google"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-twitter"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button>
-        </div>
-
-        <p class="text-center">or:</p>
-
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="loginName" class="form-control" />
-          <label class="form-label" for="loginName">Email or username</label>
-        </div>
-
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="loginPassword" class="form-control" />
-          <label class="form-label" for="loginPassword">Password</label>
-        </div>
-
-        <!-- 2 column grid layout -->
-        <div class="row mb-4">
-          <div class="col-md-6 d-flex justify-content-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-3 mb-md-0">
-              <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-              <label class="form-check-label" for="loginCheck"> Remember me </label>
-            </div>
+  <div class="container">
+    <div class="login-form" id="loginForm">
+      <h2>Login</h2>
+      <div class="all-l">
+        <form class="form-style">
+          <div class="log-input">
+            <input id="log-email" type="email" placeholder="Email" required>
+            <input id="log-password" type="password" placeholder="Password" required>
+            <p><a href="">forgot password</a></p>
           </div>
-
-          <div class="col-md-6 d-flex justify-content-center">
-            <!-- Simple link -->
-            <a href="#!">Forgot password?</a>
-          </div>
+        </form>
+        <div class="regist-style">
+          <button class="register-btn" id="register-btn" onclick="showRegisterForm()">Register</button>
+          <button type="submit" id="sign-in">Sign In</button>
         </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-        <!-- Register buttons -->
-        <div class="text-center">
-          <p>Not a member? <a href="#!">Register</a></p>
-        </div>
-      </form>
+      </div>
+      <p id="authentification">Invalid email/password !</p>
     </div>
-    <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-      <form>
-        <div class="text-center mb-3">
-          <p>Sign up with:</p>
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-facebook-f"></i>
-          </button>
 
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-google"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-twitter"></i>
-          </button>
-
-          <button type="button" class="btn btn-link btn-floating mx-1">
-            <i class="fab fa-github"></i>
-          </button>
-        </div>
-
-        <p class="text-center">or:</p>
-
-        <!-- Name input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="registerName" class="form-control" />
-          <label class="form-label" for="registerName">Name</label>
-        </div>
-
-        <!-- Username input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="registerUsername" class="form-control" />
-          <label class="form-label" for="registerUsername">Username</label>
-        </div>
-
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="registerEmail" class="form-control" />
-          <label class="form-label" for="registerEmail">Email</label>
-        </div>
-
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="registerPassword" class="form-control" />
-          <label class="form-label" for="registerPassword">Password</label>
-        </div>
-
-        <!-- Repeat Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="registerRepeatPassword" class="form-control" />
-          <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-        </div>
-
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-          <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
-            aria-describedby="registerCheckHelpText" />
-          <label class="form-check-label" for="registerCheck">
-            I have read and agree to the terms
-          </label>
-        </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
-      </form>
+    <div class="register-form" id="registerForm">
+      <h2>Register</h2>
+      <div class="all-r">
+        <article class="list-regist">
+          <form class="form-style">
+            <input id="reg-name" type="text" placeholder="Name" required>
+            <input id="reg-firtName" type="text" placeholder="First Name" required>
+            <input id="reg-email" type="email" placeholder="Email" required>
+            <input id="reg-password" type="password" placeholder="Password" required>
+            <input id="confPass" type="password" placeholder="Confirm Password" required>
+          </form>
+          <div class="sign-in-style">
+            <button class="login-btn" onclick="showLoginForm()">Sign In</button>
+            <button type="submit" class="create-btn">Create</button>
+          </div>
+        </article>
+        <p id="authentification">Invalid email/password !</p>
+      </div>
     </div>
   </div>
-  <script src="../../plungins/sass/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-  <script src="../../plungins/sass/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
-  <!-- Pills content -->
+  <script src="../js/login.js"></script>
 </body>
 
 </html>

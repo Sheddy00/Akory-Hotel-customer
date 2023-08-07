@@ -1,0 +1,220 @@
+/*=============================================*/
+/*---------------room-booking------------------*/
+/*=============================================*/
+#booking {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+#booking .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 700px !important;
+    margin-bottom: 50px !important;
+    margin-top: 10px !important;
+}
+
+.all-input {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.inputs {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+}
+
+.bookingForm .case-input {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+form {
+    padding: 10px !important;
+}
+
+.case-input input {
+    width: 300px !important;
+    height: 45px !important;
+    padding: 10px !important;
+    font-size: 15px !important;
+    margin-bottom: 10px !important;
+    background: rgb(194, 194, 194, 0.5) !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+.case-input label {
+    font-size: 20px !important;
+    padding: 10px !important;
+}
+
+.reserve .quant-num {
+    display: flex !important;
+    flex-direction: row !important;
+    margin-bottom: 10px !important;
+}
+
+.quant-num-inside2 {
+    display: flex !important;   
+    padding: 10px !important;
+    margin-left: 50px !important;
+}
+
+.quant-num-inside2 .res-room {
+    margin-right: 10px !important;
+}
+
+.quant-num-inside2 .res-room a {
+    text-decoration-line: none !important;
+    color: rgb(0, 149, 255) !important;
+    font-weight: bold !important;
+}
+
+.quant-num-inside2 .res-room a span {
+    color: grey !important;
+}
+
+.quant-num-inside2 .estim-price h1 {
+    color: rgb(255, 166, 0) !important;
+    font-size: 25px;
+}
+
+.quant-num-inside {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.quant-num-inside label {
+    font-size: 20px !important;
+    padding-bottom: 10px !important;
+    padding-left: 10px !important;
+}
+
+.quant-num-inside input {
+    padding: 10px !important;
+    font-size: 15px !important;
+    border: solid grey 1px !important;
+    width: 100px !important;
+}
+
+.reserve {
+    padding-left: 10px !important;
+}
+
+.reserve button {
+    margin-top: 10px !important;
+    width: 160px !important;
+    height: 45px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: rgb(56, 56, 56) !important;
+    color: #fff !important;
+    font-size: 17px !important;
+    transition: .5s !important;
+}
+
+.reserve button:hover {
+    background: rgb(34, 34, 34) !important;
+    color: rgb(255, 89, 0) !important;
+}
+
+@media screen and (max-width : 700px) {
+    .container {
+        width: 600px !important;
+    }
+
+    .intro {
+        width: 600px !important;
+    }
+
+    .case-input input {
+        width: 250px !important;
+        height: 15px !important;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .container {
+        width: 500px !important;
+    }
+
+    .intro {
+        width: 500px !important;
+    }
+
+    .intro h2 {
+        font-size: 40px !important;
+    }
+
+    .inputs {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .case-input input {
+        width: 450px !important;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .container {
+        width: 400px !important;
+    }
+
+    .intro {
+        width: 400px !important;
+    }
+
+    .case-input input {
+        width: 350px !important;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .container {
+        width: 300px !important;
+    }
+
+    .intro {
+        width: 300px !important;
+    }
+
+    .case-input input {
+        width: 250px !important;
+        height: 15px !important;
+    }
+}
+
+@media screen and (max-width : 300px) {
+    .container {
+        width: 240px !important;
+    }
+
+    .intro {
+        width: 240px !important;
+    }
+
+    .case-input input {
+        width: 200px !important;
+        height: 15px !important;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .quant-num-inside2 {
+        margin-left: 20px !important;
+    }
+
+    .quant-num-inside2 .estim-price h1 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .quant-num-inside2 {
+        margin-left: 0 !important;
+    }
+}

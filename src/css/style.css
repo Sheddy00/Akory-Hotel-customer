@@ -8798,95 +8798,6 @@ input[type="text"] {
     height: 200px;
   }
 }
-/*
-#footer {
-  float: left;
-  width: 100%;
-  font-size: 16px;
-  background: linear-gradient(to right, #ff6a00, rgba(255, 111, 0, 0.5)) !important;
-}
-
-#footer .bgc {
-  background: white;
-  padding: 40px;
-  margin: 40px;
-}
-
-@media screen and (max-width: 768px) {
-  #footer .bgc {
-    margin: 7px;
-  }
-}
-
-#footer a {
-  color: #FF5722;
-}
-#footer a:hover {
-  text-decoration: underline !important;
-  color: #FF5722;
-}
-#footer p {
-  font-size: 16px;
-}
-#footer h3 {
-  font-size: 15px;
-}
-#footer ul.link {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-#footer ul.link li {
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-#footer .copyright {
-  margin-top: 0;
-}
-#footer #form-subscribe .form-field {
-  position: relative;
-}
-#footer #form-subscribe input[type="email"] {
-  background: #fff;
-  padding: 5px 70px 5px 15px;
-  border: none;
-  height: 45px;
-  line-height: 30px;
-  width: 100%;
-}
-#footer #form-subscribe input[type="submit"] {
-  background: #3c4146;
-  border: none;
-  color: #fff;
-  height: 45px;
-  padding: 5px 15px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-#footer .social-icons {
-  padding: 0;
-  margin: 0;
-}
-#footer .social-icons li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-#footer .social-icons li a {
-  font-size: 30px;
-  color: rgba(0, 0, 0,0.7) !important;
-}
-#footer .social-icons li a:hover, #footer .social-icons li a:focus, #footer .social-icons li a:active {
-  color: rgba(0, 0, 0,0.9) !important;
-  outline: none;
-  text-decoration: none !important;
-}
-#footer .social-icons li a:hover i, #footer .social-icons li a:focus i, #footer .social-icons li a:active i {
-  text-decoration: none;
-}*/
-
 .fh5co-bg-color {
   background: #e6e6e6;
 }
@@ -9337,6 +9248,10 @@ input[type="text"] {
       margin-top: 15px !important;
   }
 }
+/*
+.slides .desc h2 {
+  color: rgb(255, 166, 0);
+}*/
 
 /*==================seach-rooms-selector====================*/
 .selector {
