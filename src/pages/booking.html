@@ -66,6 +66,7 @@
 
 	<!-- Style -->
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/booking.css">
 
 	<link rel="stylesheet" href="../css/room.css">
 	<link href="../../plungins/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
@@ -92,26 +93,9 @@
 								<ul class="sf-menu" id="fh5co-primary-menu">
 									<li><a href="../../index.html">Home</a></li>
 									<li>
-										<a href="room.html" class="fh5co-sub-ddown">Hotel</a>
-										<!--<ul class="fh5co-sub-menu">
-								 	<li><a href="#">Luxe Hotel</a></li>
-								 	<li><a href="#">Deluxe Hotel</a></li>
-									<li>
-										<a href="#" class="fh5co-sub-ddown">King Hotel</a>
-										<ul class="fh5co-sub-menu">
-											<li><a href="http://freehtml5.co/preview/?item=build-free-html5-bootstrap-template" target="_blank">Build</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=work-free-html5-template-bootstrap" target="_blank">Work</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=light-free-html5-template-bootstrap" target="_blank">Light</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=relic-free-html5-template-using-bootstrap" target="_blank">Relic</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=display-free-html5-template-using-bootstrap" target="_blank">Display</a></li>
-											<li><a href="http://freehtml5.co/preview/?item=sprint-free-html5-template-bootstrap" target="_blank">Sprint</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Five Star Hotel</a></li> 
-								</ul>-->
+										<a href="room.html" class="fh5co-sub-ddown">Room</a>
 									</li>
 									<li><a class="active" href="booking.html">Booking</a></li>
-									<li><a href="blog.html">Blog</a></li>
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</nav>
@@ -129,84 +113,67 @@
 						<div
 							class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 							<div class="fh5co-intro fh5co-table-cell">
-								<h1 class="text-center">We Offer Services</h1>
-								<p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a>
-								</p>
+								<h1 class="text-center" style="color: rgb(255, 166, 0);">Room booking</h1>
+								<p>Book your stay at our hotel now and discover an unforgettable experience.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-
-			<div id="fh5co-services-section">
+			<div id="booking">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-location-pin"></i></span>
-								<div class="desc">
-									<h3>Accessible Location</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-								</div>
+					<div class="all-input">
+						<div class="inputs">
+							<div class="booking-form">
+								<form class="bookingForm">
+									<div class="case-input">
+										<label>First Name</label>
+										<input id="firstname" placeholder="E.g John" type="text">
+									</div>
+									<div class="case-input">
+										<label>Mobile</label>
+										<input id="mobile" placeholder="E.g +261 32 456 89" type="tel">
+									</div>
+									<div class="case-input">
+										<label>Check-In</label>
+										<input id="Check-in-date" type="date">
+									</div>
+								</form>
+							</div>
+							<div class="booking-form">
+								<form class="bookingForm">
+									<div class="case-input">
+										<label>Last Name</label>
+										<input id="lastname" placeholder="E.g Sina" type="text">
+									</div>
+									<div class="case-input">
+										<label>Email</label>
+										<input id="email" placeholder="E.g email@example.com" type="email">
+									</div>
+									<div class="case-input">
+										<label>Check-Out</label>
+										<input id="Check-out-date" type="date">
+									</div>
+								</form>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-alarm-clock"></i></span>
-								<div class="desc">
-									<h3>Open 24/7</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
+						<div class="reserve">
+							<div class="quant-num">
+								<div class="quant-num-inside">
+									<label>Person</label>
+									<input id="quantity" placeholder="E.g 1" type="number">
+								</div>
+								<div class="quant-num-inside2">
+									<div class="res-room">
+										<a href="">Your room :<span id="res-room-id"> 1</span></a>
+									</div>
+									<div class="estim-price" style="margin-left: 10px;">
+										<h1>Estimated price :<span id=""> 345351</span></h1>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-calendar"></i></span>
-								<div class="desc">
-									<h3>Reservation</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-user"></i></span>
-								<div class="desc">
-									<h3>Friendly Staff</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-signal"></i></span>
-								<div class="desc">
-									<h3>Free Wifi</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="services">
-								<span><i class="ti-location-pin"></i></span>
-								<div class="desc">
-									<h3>Accessible Location</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and
-										Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-										right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
+							<button id="booknow">Book now</button>
 						</div>
 					</div>
 				</div>
