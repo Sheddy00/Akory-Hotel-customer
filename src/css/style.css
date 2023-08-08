@@ -9248,10 +9248,83 @@ input[type="text"] {
       margin-top: 15px !important;
   }
 }
-/*
-.slides .desc h2 {
-  color: rgb(255, 166, 0);
-}*/
+
+/* ================================================= */
+/* -------------- Section Header Style ------------- */
+/* ================================================= */
+
+.section-header {
+  position: relative !important;
+  max-width: 700px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.section-header h2 {
+  font-size: 45px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 15px !important;
+}
+
+.section-header p {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  line-height: 25px !important;
+}
+
+@media (max-width: 767.98px) {
+  .section-header h2 {
+      font-size: 35px !important;
+      font-weight: 700 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-header h2 {
+      font-size: 25px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0 !important;
+  }
+}
+
+#carossele {
+  display: flex;
+  justify-content: center;
+}
+
+.carossele {
+  overflow: hidden !important;
+  width: 400px;
+  height: 360px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  transition: .5s;
+}
+
+.carossele:hover {
+  border-radius: 40px 0 40px 0;
+}
+
+.about-carous-img {
+  display: flex;
+  flex-direction: row !important;
+  animation: action 8s infinite ease-out;
+}
+
+.about-carous-img img {
+  width: 400px;
+  height: 360px;
+}
+
+@keyframes action {
+  0% { margin-left: 0; }
+  50% { margin-left: -400px; }
+  100% { margin-left: 0; }
+}
 
 /*==================seach-rooms-selector====================*/
 .selector {

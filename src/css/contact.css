@@ -1,0 +1,138 @@
+* {
+    padding : 0;
+    margin: 0;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#contact input {
+    height: 50px !important;
+}
+
+.contact-input {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact-input1 {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-input .contact-input-name,
+.contact-input1 .contact-input-note {
+    width: 300px;
+    /*padding: 10px;*/
+}
+
+.contact-input .contact-input-name,
+.contact-input1 .contact-input-note,
+.contact-comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-input .contact-input-name input,
+.contact-input1 .contact-input-note input{
+    border: none;
+    height: 25px;
+    width: 250px;
+    background: rgb(216, 216, 216);
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.contact-comment {
+    width: 580px;
+    /*padding: 10px;*/
+}
+
+.contact-comment input {
+    height: 140px;
+    padding: 10px;
+    font-size: 17px;
+    background: rgb(202, 202, 202);
+    border: none;
+}
+
+.contact-input .contact-input-name label,
+.contact-input1 .contact-input-note label,
+.contact-comment label{
+    /*padding: 10px;*/
+    font-size: 20px;
+}
+
+.contact-comment textarea {
+    width: 530px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(224, 224, 224);
+    padding: 10px;
+}
+
+.contact-input1 button {
+    border: none;
+    background: rgb(53, 53, 53);
+    color: #fff;
+    transition: .5s;
+    width: 100px;
+    height: 50px !important;
+    font-size: 17px;
+    margin-left: -50px !important;
+}
+.contact-input1 button:hover {
+    background: rgb(57, 57, 57);
+    color: orangered;
+}
+
+@media screen and (max-width : 600px) {
+    .contact-input {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-comment {
+        width: 300px;
+    }
+    .contact-comment textarea {
+        width: 280px;
+    }
+    .contact-input {
+        width: 300px;
+    }
+    .contact-input1 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width : 330px) {
+    .contact-comment {
+        width: 200px;
+    }
+    .contact-comment textarea {
+        width: 180px;
+    }
+    .contact-input {
+        width: 200px;
+    }
+    .contact-input1 {
+        width: 200px;
+    }
+    .contact-input .contact-input-name,
+    .contact-input1 .contact-input-note {
+        width: 200px;
+    }
+    .contact-input .contact-input-name input,
+    .contact-input1 .contact-input-note input {
+        width: 180px;
+    }
+}

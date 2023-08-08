@@ -1180,47 +1180,6 @@
 }
 
 /* ================================================= */
-/* -------------- Section Header Style ------------- */
-/* ================================================= */
-
-.section-header {
-    position: relative !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    margin-bottom: 150px !important;
-}
-
-.section-header h2 {
-    font-size: 45px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1px !important;
-    margin-bottom: 15px !important;
-}
-
-.section-header p {
-    margin: 0 !important;
-    font-size: 18px !important;
-    font-weight: 300 !important;
-    line-height: 25px !important;
-}
-
-@media (max-width: 767.98px) {
-    .section-header h2 {
-        font-size: 35px !important;
-        font-weight: 700 !important;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .section-header h2 {
-        font-size: 25px !important;
-        font-weight: 600 !important;
-        letter-spacing: 0 !important;
-    }
-}
-
-/* ================================================= */
 /* ----------------- Amenities Style --------------- */
 /* ================================================= */
 
