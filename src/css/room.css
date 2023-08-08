@@ -671,3 +671,11 @@ footer {
     font-weight: 1000;
 
 }
+.nav-logo{
+    width: 25%;
+    height: 25%;
+    position: relative;
+    top: -3rem;
+    left: -5rem;
+    filter: brightness(1.4);
+}
