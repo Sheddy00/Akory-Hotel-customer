@@ -42,7 +42,7 @@ function afficherDonnees(data) {
     } else {
         data.forEach(room => {
             const imagePath = room.images_paths ?
-                `./../../../../../../../../..${room.images_paths.replace(/\s/g, '\\ ')}` :
+                `./../../../../../../../../..${room.images_paths.replaceAll(/\s/g, '\\ ')}` :
                 "../../public/assets/images/alt_image.png";
 
             const promotionsDayValue = room.promotions_day
@@ -53,7 +53,7 @@ function afficherDonnees(data) {
                 <div class="room_items">
                     <div class="room_image_content"  "
                     style="background-image: url(${imagePath});"> 
-                    ${room.number}
+                    ${room.id}
                 </div>
     
                 <div class="room_details_content">
@@ -88,8 +88,8 @@ function afficherDonnees(data) {
                             This is your chance to take advantage, as the price is reduced by
                             <span id="netPrice"> ${promotionsDayValue}Ar/nigth</span>
                             until the end of promotion
-                            <span id="promotion_name"><a href="../../index.html"> Sarika</a></span> on
-                            <span id="promotion_end"> 06 janvier 2024</span> .
+                            <span id="promotion_name"><a href="../../index.html"> ${room.name}</a></span> on
+                            <span id="promotion_end"> ${room.end}</span> .
                             While the net price is:
                             <span id="net_price"> ${room.price}/night</span>
                         </div> `
@@ -101,7 +101,7 @@ function afficherDonnees(data) {
                     </div>`
                 }
                 </div>
-                <div class="room_booking_content">
+                <div class="room_booking_content" id="cible">
                     <p id="booking_now">BOOKING NOW: </p>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
@@ -121,6 +121,16 @@ function afficherDonnees(data) {
                 </div>
         </div>
         `
+
+                // ----------------------even-booking
+            const bookingButton = roomDiv.querySelector("#cible"); 
+
+            bookingButton.addEventListener("click", (ev) => {
+                alert("Log in en preparation!");
+                window.location.href = "./booking.html";
+            });
+                // ----------------------even-booking-end
+
             roomListDiv.appendChild(roomDiv);
         });
 
@@ -178,7 +188,7 @@ function getRoomsListNetAndGrosPrice() {
                         .filter(room => selectedCapacity != null ? (room.capacity_room >= selectedCapacity) : true)
                         .filter(room => priceTableInterval != null
                             ? (room.promotions_day >= priceTableInterval[0] && room.promotions_day <= priceTableInterval[1]) : true);
-    
+
 
                     afficherDonnees(updatedFilteredData);
                 };
