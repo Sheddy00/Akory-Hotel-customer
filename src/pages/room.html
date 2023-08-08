@@ -78,8 +78,9 @@
 	<link href="../../plungins/fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet">
 
 	<!-- Fetch data -->
-	<script src="../js/room.js" defer></script>
 	<script src="../js/fetch-data/room-data.js" defer></script>
+	<script src="../js/room.js" defer></script>
+	
 	
 </head>
 
@@ -134,7 +135,7 @@
 						<div id="province_space">
 							<i class="fa-solid fa-location-dot"></i>
 							<select name="province" id="province_items">
-								<option value="null">Select Province</option>
+								<!-- <option value="null">Select Province</option> -->
 								<option value="Nosy Be">Nosy Be</option>
 								<option value="Antsiranana">Antsiranana</option>
 								<option value="Toliara">Toliara</option>
@@ -152,7 +153,7 @@
 						</div>
 						<div id="room_type">
 							<select name="room_type_select" id="room_type_select">
-								<option value="null">Choose</option>
+								<!-- <option value="null">Choose</option> -->
 								<option value="VIP">VIP</option>
 								<option value="twin">twin</option>
 								<option value="family">family</option>
@@ -188,17 +189,17 @@
 							<input type="checkbox" name="promotion" id="promotion" checked="false">
 						</div>
 						<div id="capacity">
-							<input type="number" name="capacity" id="capacity_input">
+							<input type="number" name="capacity" value="1" id="capacity_input">
 							<label for="capacity">Capacity</label>
 						</div>
 					</button>
 					<div class="price_handler">
 						<div id="min_price">
-							<input type="number" name="min_price"> 
+							<input type="number" value="1200" name="min_price"> 
 							<span>MIN</span>
 						</div>
 						<div id="max_price">
-							<input type="number" name="max_price">
+							<input type="number" value="1200000" name="max_price">
 							<span>MAX</span>
 						</div>
 						<p>Price Ariary</p>
